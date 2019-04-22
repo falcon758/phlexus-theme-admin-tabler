@@ -6,7 +6,7 @@
 
 <body>
 <div class="page">
-    {{ content() }}
+    {% block content %}{% endblock %}
 </div>
 
 </body>
