@@ -1,5 +1,3 @@
-{% extends '../layouts/default.volt' %}
-
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">

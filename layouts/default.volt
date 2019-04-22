@@ -1,3 +1,6 @@
+{% extends 'layouts/base.volt' %}
+
+{% block content %}
 <div class="page-main">
     <div class="header py-4">
         <div class="container">
@@ -45,9 +48,9 @@
                         <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                             <span class="avatar" style="background-image: url({{ site.base }}/{{ user.photo }})"></span>
                             <span class="ml-2 d-none d-lg-block">
-							<span class="text-default">{{ user.name }} {{ user.surname }}</span>
-							<small class="text-muted d-block mt-1">Administrator</small>
-						</span>
+                        <span class="text-default">{{ user.name }} {{ user.surname }}</span>
+                        <small class="text-muted d-block mt-1">Administrator</small>
+                    </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                             <a class="dropdown-item" href="#">
@@ -93,7 +96,7 @@
                     </form>
                 </div>
                 <div class="col-lg order-lg-first">
-                    {% include menu.html %}
+                    Menu
                 </div>
             </div>
         </div>
@@ -101,11 +104,11 @@
 
     <div class="my-3 my-md-5">
         {% if pageTitle is defined %}
-        <div class="container">
-            <div class="page-header">
-                <h1 class="page-title">{{ pageTitle }}</h1>
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">{{ pageTitle }}</h1>
+                </div>
             </div>
-        </div>
         {% endif %}
 
         {{ content() }}
@@ -172,3 +175,4 @@
         </div>
     </div>
 </footer>
+{% endblock %}
