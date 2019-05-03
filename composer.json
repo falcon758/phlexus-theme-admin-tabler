@@ -3,8 +3,8 @@
     "type": "library",
     "description": "Phlexus Theme - Tabler",
     "require": {
-        "composer/installers": "~1.0",
-        "phlexus/phlexus-core": "*"
+        "phlexus/phlexus-core": "*",
+        "oomphinc/composer-installers-extender": "~1.0"
     },
     "extra": {
         "installer-paths": {
