@@ -1,0 +1,8 @@
+{
+    "name": "phlexus/phlexus-tabler-admin-theme",
+    "type": "library",
+    "description": "Phlexus Theme - Tabler",
+    "require": {
+        "phlexus/phlexus-core": "*"
+    }
+}
