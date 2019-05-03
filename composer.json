@@ -3,6 +3,14 @@
     "type": "library",
     "description": "Phlexus Theme - Tabler",
     "require": {
+        "composer/installers": "~1.0",
         "phlexus/phlexus-core": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "themes/{$name}/": [
+                "phlexus/phlexus-tabler-admin-theme"
+            ]
+        }
     }
 }
