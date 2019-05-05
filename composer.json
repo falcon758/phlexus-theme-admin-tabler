@@ -1,8 +1,25 @@
 {
-    "name": "phlexus/phlexus-tabler-admin-theme",
-    "type": "library",
-    "description": "Phlexus Theme - Tabler",
+    "name": "phlexus/phlexus-admin-module",
+    "description": "Phlexus Admin Module",
     "require": {
-        "phlexus/phlexus-core": "*"
+        "phlexus/phlexus-core": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phlexus\\Modules\\Admin\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-package-install": "Phlexus\\ThemeManager::install",
+        "post-package-update": "Phlexus\\ThemeManager::install",
+        "post-package-uninstall": "Phlexus\\ThemeManager::uninstall"
     }
 }
