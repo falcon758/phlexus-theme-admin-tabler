@@ -16,10 +16,5 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
-    },
-    "scripts": {
-        "post-package-install": "Phlexus\\ThemeManager::install",
-        "post-package-update": "Phlexus\\ThemeManager::install",
-        "post-package-uninstall": "Phlexus\\ThemeManager::uninstall"
     }
 }
