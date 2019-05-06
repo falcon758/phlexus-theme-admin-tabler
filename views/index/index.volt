@@ -1,4 +1,4 @@
-{% extends 'layouts/default' %}
+{% extends 'layouts/default.volt' %}
 
 {% block content %}
 <div class="container">
