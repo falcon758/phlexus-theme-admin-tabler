@@ -130,7 +130,7 @@
                 </div>
             {% endif %}
 
-            {% block content %}{% endblock %}
+            {{ content() }}
         </div>
     </div>
 
