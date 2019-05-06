@@ -1,3 +1,6 @@
+{% extends 'layouts/default' %}
+
+{% block content %}
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
@@ -1874,3 +1877,4 @@
         </div>
     </div>
 </div>
+{% endblock %}
