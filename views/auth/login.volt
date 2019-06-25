@@ -8,7 +8,7 @@
                 <div class="text-center mb-6">
                     <img src="./demo/brand/tabler.svg" class="h-6" alt="">
                 </div>
-                <form class="card" action="" method="post">
+                <form class="card" action="/admin/auth/doLogin" method="post">
                     <div class="card-body p-6">
                         <div class="card-title">Login to your account</div>
                         <div class="form-group">
