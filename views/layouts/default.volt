@@ -21,21 +21,21 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                             <a href="#" class="dropdown-item d-flex">
-                                <span class="avatar mr-3 align-self-center" style="background-image: url({{ site.data.users[1].photo }})"></span>
+                                <span class="avatar mr-3 align-self-center" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/male/41.jpg)"></span>
                                 <div>
                                     <strong>Username1</strong> pushed new commit: Fix page load performance issue.
                                     <div class="small text-muted">10 minutes ago</div>
                                 </div>
                             </a>
                             <a href="#" class="dropdown-item d-flex">
-                                <span class="avatar mr-3 align-self-center" style="background-image: url({{ site.data.users[2].photo }})"></span>
+                                <span class="avatar mr-3 align-self-center" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/male/1.jpg)"></span>
                                 <div>
                                     <strong>Username2</strong> started new task: Tabler UI design.
                                     <div class="small text-muted">1 hour ago</div>
                                 </div>
                             </a>
                             <a href="#" class="dropdown-item d-flex">
-                                <span class="avatar mr-3 align-self-center" style="background-image: url({{ site.data.users[3].photo }})"></span>
+                                <span class="avatar mr-3 align-self-center" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/male/18.jpg)"></span>
                                 <div>
                                     <strong>Username3</strong> deployed new version of NodeJS REST Api V3
                                     <div class="small text-muted">2 hours ago</div>

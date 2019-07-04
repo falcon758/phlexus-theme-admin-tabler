@@ -409,8 +409,7 @@
                                     </div>
                                 </div>
                                 <div class="progress progress-xs">
-                                    <div class="progress-bar bg-red" role="progressbar" style="width: 0%"
-                                         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-red" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </td>
                             <td class="text-center">
