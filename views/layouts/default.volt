@@ -5,14 +5,15 @@
     <div class="header py-4">
         <div class="container">
             <div class="d-flex">
-                <a class="header-brand" href="/index.html">
-                    <img src="/assets/themes/phlexus-tabler-admin-theme/demo/brand/tabler.svg" class="header-brand-img" alt="tabler logo">
+                <a class="header-brand" href="/admin">
+                    <img src="https://tabler.io/img/tabler.svg" class="header-brand-img" alt="tabler logo">
                 </a>
 
                 <div class="d-flex order-lg-2 ml-auto">
                     <div class="nav-item d-none d-md-flex">
-                        <a href="{{ site.github_url }}" class="btn btn-sm btn-outline-primary" target="_blank">Source code</a>
+                        <a href="https://github.com/phlexus" class="btn btn-sm btn-outline-primary" target="_blank">Source code</a>
                     </div>
+
                     <div class="dropdown d-none d-md-flex">
                         <a class="nav-link icon" data-toggle="dropdown">
                             <i class="fe fe-bell"></i>
@@ -44,13 +45,14 @@
                             <a href="#" class="dropdown-item text-center">Mark all as read</a>
                         </div>
                     </div>
+
                     <div class="dropdown">
                         <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
                             <span class="avatar" style="background-image: url({{ site.base }}/{{ user.photo }})"></span>
                             <span class="ml-2 d-none d-lg-block">
-                    <span class="text-default">{{ user.name }} {{ user.surname }}</span>
-                    <small class="text-muted d-block mt-1">Administrator</small>
-                </span>
+                                <span class="text-default">Name Surname</span>
+                                <small class="text-muted d-block mt-1">Administrator</small>
+                            </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                             <a class="dropdown-item" href="#">
@@ -95,45 +97,55 @@
                         </div>
                     </form>
                 </div>
+
                 <div class="col-lg order-lg-first">
                     <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                         <li class="nav-item">
-                            <a href="./index.html" class="nav-link active"><i class="fe fe-home"></i> Home</a>
+                            <a href="/admin" class="nav-link active"><i class="fe fe-home"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-box"></i> Interface</a>
+                            <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">
+                                <i class="fe fe-box"></i> Interface
+                            </a>
+
                             <div class="dropdown-menu dropdown-menu-arrow">
-                                <a href="./cards.html" class="dropdown-item ">Cards design</a>
-                                <a href="./charts.html" class="dropdown-item ">Charts</a>
-                                <a href="./pricing-cards.html" class="dropdown-item ">Pricing cards</a>
+                                <a href="./cards.html" class="dropdown-item">Cards design</a>
+                                <a href="./charts.html" class="dropdown-item">Charts</a>
+                                <a href="./pricing-cards.html" class="dropdown-item">Pricing cards</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-calendar"></i> Components</a>
+                            <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">
+                                <i class="fe fe-calendar"></i> Components
+                            </a>
+
                             <div class="dropdown-menu dropdown-menu-arrow">
-                                <a href="./maps.html" class="dropdown-item ">Maps</a>
-                                <a href="./icons.html" class="dropdown-item ">Icons</a>
-                                <a href="./store.html" class="dropdown-item ">Store</a>
-                                <a href="./blog.html" class="dropdown-item ">Blog</a>
-                                <a href="./carousel.html" class="dropdown-item ">Carousel</a>
+                                <a href="./maps.html" class="dropdown-item">Maps</a>
+                                <a href="./icons.html" class="dropdown-item">Icons</a>
+                                <a href="./store.html" class="dropdown-item">Store</a>
+                                <a href="./blog.html" class="dropdown-item">Blog</a>
+                                <a href="./carousel.html" class="dropdown-item">Carousel</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown"><i class="fe fe-file"></i> Pages</a>
+                            <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">
+                                <i class="fe fe-file"></i> Pages
+                            </a>
+
                             <div class="dropdown-menu dropdown-menu-arrow">
-                                <a href="./profile.html" class="dropdown-item ">Profile</a>
-                                <a href="./login.html" class="dropdown-item ">Login</a>
-                                <a href="./register.html" class="dropdown-item ">Register</a>
-                                <a href="./forgot-password.html" class="dropdown-item ">Forgot password</a>
-                                <a href="./400.html" class="dropdown-item ">400 error</a>
-                                <a href="./401.html" class="dropdown-item ">401 error</a>
-                                <a href="./403.html" class="dropdown-item ">403 error</a>
-                                <a href="./404.html" class="dropdown-item ">404 error</a>
-                                <a href="./500.html" class="dropdown-item ">500 error</a>
-                                <a href="./503.html" class="dropdown-item ">503 error</a>
-                                <a href="./email.html" class="dropdown-item ">Email</a>
-                                <a href="./empty.html" class="dropdown-item ">Empty page</a>
-                                <a href="./rtl.html" class="dropdown-item ">RTL mode</a>
+                                <a href="./profile.html" class="dropdown-item">Profile</a>
+                                <a href="./login.html" class="dropdown-item">Login</a>
+                                <a href="./register.html" class="dropdown-item">Register</a>
+                                <a href="./forgot-password.html" class="dropdown-item">Forgot password</a>
+                                <a href="./400.html" class="dropdown-item">400 error</a>
+                                <a href="./401.html" class="dropdown-item">401 error</a>
+                                <a href="./403.html" class="dropdown-item">403 error</a>
+                                <a href="./404.html" class="dropdown-item">404 error</a>
+                                <a href="./500.html" class="dropdown-item">500 error</a>
+                                <a href="./503.html" class="dropdown-item">503 error</a>
+                                <a href="./email.html" class="dropdown-item">Email</a>
+                                <a href="./empty.html" class="dropdown-item">Empty page</a>
+                                <a href="./rtl.html" class="dropdown-item">RTL mode</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -171,7 +183,7 @@
                 <div class="row">
                     <div class="col-6 col-md-3">
                         <ul class="list-unstyled mb-0">
-                            <li><a href="#">First link</a></li>
+                            <li><a href="/admin">Home</a></li>
                             <li><a href="#">Second link</a></li>
                         </ul>
                     </div>
@@ -209,12 +221,12 @@
                 <div class="row align-items-center">
                     <div class="col-auto">
                         <ul class="list-inline list-inline-dots mb-0">
-                            <li class="list-inline-item"><a href="/docs/index.html">Documentation</a></li>
-                            <li class="list-inline-item"><a href="/faq.html">FAQ</a></li>
+                            <li class="list-inline-item"><a href="https://github.com/phlexus">Documentation</a></li>
+                            <li class="list-inline-item"><a href="https://github.com/phlexus">FAQ</a></li>
                         </ul>
                     </div>
                     <div class="col-auto">
-                        <a href="/" class="btn btn-outline-primary btn-sm">Source code</a>
+                        <a href="https://github.com/phlexus" class="btn btn-outline-primary btn-sm">Source code</a>
                     </div>
                 </div>
             </div>
