@@ -23,21 +23,21 @@
                             <a href="#" class="dropdown-item d-flex">
                                 <span class="avatar mr-3 align-self-center" style="background-image: url({{ site.data.users[1].photo }})"></span>
                                 <div>
-                                    <strong>{{ site.data.users[1].name }}</strong> pushed new commit: Fix page load performance issue.
+                                    <strong>Username1</strong> pushed new commit: Fix page load performance issue.
                                     <div class="small text-muted">10 minutes ago</div>
                                 </div>
                             </a>
                             <a href="#" class="dropdown-item d-flex">
                                 <span class="avatar mr-3 align-self-center" style="background-image: url({{ site.data.users[2].photo }})"></span>
                                 <div>
-                                    <strong>{{ site.data.users[2].name }}</strong> started new task: Tabler UI design.
+                                    <strong>Username2</strong> started new task: Tabler UI design.
                                     <div class="small text-muted">1 hour ago</div>
                                 </div>
                             </a>
                             <a href="#" class="dropdown-item d-flex">
                                 <span class="avatar mr-3 align-self-center" style="background-image: url({{ site.data.users[3].photo }})"></span>
                                 <div>
-                                    <strong>{{ site.data.users[3].name }}</strong> deployed new version of NodeJS REST Api V3
+                                    <strong>Username3</strong> deployed new version of NodeJS REST Api V3
                                     <div class="small text-muted">2 hours ago</div>
                                 </div>
                             </a>
@@ -48,7 +48,7 @@
 
                     <div class="dropdown">
                         <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                            <span class="avatar" style="background-image: url({{ site.base }}/{{ user.photo }})"></span>
+                            <span class="avatar" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/male/9.jpg)"></span>
                             <span class="ml-2 d-none d-lg-block">
                                 <span class="text-default">Name Surname</span>
                                 <small class="text-muted d-block mt-1">Administrator</small>
