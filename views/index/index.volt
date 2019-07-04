@@ -95,7 +95,9 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td class="w-1"><span class="avatar" style="background-image: url(./demo/faces/male/9.jpg)"></span></td>
+                            <td class="w-1">
+                                <span class="avatar" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/male/9.jpg)"></span>
+                            </td>
                             <td>Ronald Bradley</td>
                             <td>Initial commit</td>
                             <td class="text-nowrap">May 6, 2018</td>
@@ -109,21 +111,21 @@
                             <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
                         </tr>
                         <tr>
-                            <td><span class="avatar" style="background-image: url(./demo/faces/female/1.jpg)"></span></td>
+                            <td><span class="avatar" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/female/1.jpg)"></span></td>
                             <td>Beverly Armstrong</td>
                             <td>Left sidebar adjustments</td>
                             <td class="text-nowrap">April 15, 2018</td>
                             <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
                         </tr>
                         <tr>
-                            <td><span class="avatar" style="background-image: url(./demo/faces/male/4.jpg)"></span></td>
+                            <td><span class="avatar" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/male/4.jpg)"></span></td>
                             <td>Bobby Knight</td>
                             <td>Topbar dropdown style</td>
                             <td class="text-nowrap">April 8, 2018</td>
                             <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
                         </tr>
                         <tr>
-                            <td><span class="avatar" style="background-image: url(./demo/faces/female/11.jpg)"></span></td>
+                            <td><span class="avatar" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/female/11.jpg)"></span></td>
                             <td>Sharon Wells</td>
                             <td>Fixes #625</td>
                             <td class="text-nowrap">April 9, 2018</td>
@@ -131,99 +133,6 @@
                         </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-            <script>
-                require(['c3', 'jquery'], function(c3, $) {
-                    $(document).ready(function(){
-                        var chart = c3.generate({
-                            bindto: '#chart-development-activity', // id of chart wrapper
-                            data: {
-                                columns: [
-                                    // each columns data
-                                    ['data1', 0, 5, 1, 2, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 2, 2, 6, 30, 10, 10, 15, 14, 47, 65, 55]
-                                ],
-                                type: 'area', // default type of chart
-                                groups: [
-                                    [ 'data1', 'data2', 'data3']
-                                ],
-                                colors: {
-                                    'data1': tabler.colors["blue"]
-                                },
-                                names: {
-                                    // name of each serie
-                                    'data1': 'Purchases'
-                                }
-                            },
-                            axis: {
-                                y: {
-                                    padding: {
-                                        bottom: 0,
-                                    },
-                                    show: false,
-                                    tick: {
-                                        outer: false
-                                    }
-                                },
-                                x: {
-                                    padding: {
-                                        left: 0,
-                                        right: 0
-                                    },
-                                    show: false
-                                }
-                            },
-                            legend: {
-                                position: 'inset',
-                                padding: 0,
-                                inset: {
-                                    anchor: 'top-left',
-                                    x: 20,
-                                    y: 8,
-                                    step: 10
-                                }
-                            },
-                            tooltip: {
-                                format: {
-                                    title: function (x) {
-                                        return '';
-                                    }
-                                }
-                            },
-                            padding: {
-                                bottom: 0,
-                                left: -1,
-                                right: -1
-                            },
-                            point: {
-                                show: false
-                            }
-                        });
-                    });
-                });
-            </script>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="h5">New feedback</div>
-                            <div class="display-4 font-weight-bold mb-4">62</div>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-red" style="width: 28%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="h5">Today profit</div>
-                            <div class="display-4 font-weight-bold mb-4">$652</div>
-                            <div class="progress progress-sm">
-                                <div class="progress-bar bg-green" style="width: 84%"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -239,41 +148,6 @@
                             <div id="chart-donut" style="height: 12rem;"></div>
                         </div>
                     </div>
-                    <script>
-                        require(['c3', 'jquery'], function(c3, $) {
-                            $(document).ready(function(){
-                                var chart = c3.generate({
-                                    bindto: '#chart-donut', // id of chart wrapper
-                                    data: {
-                                        columns: [
-                                            // each columns data
-                                            ['data1', 63],
-                                            ['data2', 37]
-                                        ],
-                                        type: 'donut', // default type of chart
-                                        colors: {
-                                            'data1': tabler.colors["green"],
-                                            'data2': tabler.colors["green-light"]
-                                        },
-                                        names: {
-                                            // name of each serie
-                                            'data1': 'Maximum',
-                                            'data2': 'Minimum'
-                                        }
-                                    },
-                                    axis: {
-                                    },
-                                    legend: {
-                                        show: false, //hide legend
-                                    },
-                                    padding: {
-                                        bottom: 0,
-                                        top: 0
-                                    },
-                                });
-                            });
-                        });
-                    </script>
                 </div>
                 <div class="col-sm-6">
                     <div class="card">
@@ -326,10 +200,30 @@
                         });
                     </script>
                 </div>
-                <div class="col-sm-12">
-                    <a href="https://gumroad.com/l/tabler-email?utm_source=demo" class="card" target="_blank">
-                        <img src="/demo/card-demo.jpg" alt="" class="card-img">
-                    </a>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="h5">New feedback</div>
+                            <div class="display-4 font-weight-bold mb-4">62</div>
+                            <div class="progress progress-sm">
+                                <div class="progress-bar bg-red" style="width: 28%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="h5">Today profit</div>
+                            <div class="display-4 font-weight-bold mb-4">$652</div>
+                            <div class="progress progress-sm">
+                                <div class="progress-bar bg-green" style="width: 84%"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -389,12 +283,12 @@
     <div class="row row-cards row-deck">
         <div class="col-lg-6">
             <div class="card card-aside">
-                <a href="#" class="card-aside-column" style="background-image: url(./demo/photos/david-klaasen-54203-500.jpg)"></a>
+                <a href="#" class="card-aside-column" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/photos/david-klaasen-54203-500.jpg)"></a>
                 <div class="card-body d-flex flex-column">
                     <h4><a href="#">And this isn't my nose. This is a false one.</a></h4>
                     <div class="text-muted">Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...</div>
                     <div class="d-flex align-items-center pt-5 mt-auto">
-                        <div class="avatar avatar-md mr-3" style="background-image: url(./demo/faces/female/18.jpg)"></div>
+                        <div class="avatar avatar-md mr-3" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/female/18.jpg)"></div>
                         <div>
                             <a href="./profile.html" class="text-default">Rose Bradley</a>
                             <small class="d-block text-muted">3 days ago</small>
@@ -408,12 +302,12 @@
         </div>
         <div class="col-lg-6">
             <div class="card card-aside">
-                <a href="#" class="card-aside-column" style="background-image: url(./demo/photos/david-marcu-114194-500.jpg)"></a>
+                <a href="#" class="card-aside-column" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/photos/david-marcu-114194-500.jpg)"></a>
                 <div class="card-body d-flex flex-column">
                     <h4><a href="#">Well, I didn't vote for you.</a></h4>
                     <div class="text-muted">Well, we did do the nose. Why? Shut up! Will you shut up?! You don't frighten us, English pig-dog...</div>
                     <div class="d-flex align-items-center pt-5 mt-auto">
-                        <div class="avatar avatar-md mr-3" style="background-image: url(./demo/faces/male/16.jpg)"></div>
+                        <div class="avatar avatar-md mr-3" style="background-image: url(/assets/themes/phlexus-tabler-admin-theme/demo/faces/male/16.jpg)"></div>
                         <div>
                             <a href="./profile.html" class="text-default">Peter Richards</a>
                             <small class="d-block text-muted">3 days ago</small>
@@ -465,8 +359,7 @@
                                     </div>
                                 </div>
                                 <div class="progress progress-xs">
-                                    <div class="progress-bar bg-yellow" role="progressbar" style="width: 42%"
-                                         aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-yellow" role="progressbar" style="width: 42%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </td>
                             <td class="text-center">
@@ -1864,13 +1757,116 @@
                         </tr>
                         </tbody>
                     </table>
-                    <script>
-                        require(['datatables', 'jquery'], function(datatable, $) {
-                            $('.datatable').DataTable();
-                        });
-                    </script>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+require(['datatables', 'jquery'], function(datatable, $) {
+    $('.datatable').DataTable();
+});
+
+require(['c3', 'jquery'], function(c3, $) {
+    $(document).ready(function(){
+        var chart = c3.generate({
+            bindto: '#chart-development-activity', // id of chart wrapper
+            data: {
+                columns: [
+                    // each columns data
+                    ['data1', 0, 5, 1, 2, 7, 5, 6, 8, 24, 7, 12, 5, 6, 3, 2, 2, 6, 30, 10, 10, 15, 14, 47, 65, 55]
+                ],
+                type: 'area', // default type of chart
+                groups: [
+                    [ 'data1', 'data2', 'data3']
+                ],
+                colors: {
+                    'data1': tabler.colors["blue"]
+                },
+                names: {
+                    // name of each serie
+                    'data1': 'Purchases'
+                }
+            },
+            axis: {
+                y: {
+                    padding: {
+                        bottom: 0,
+                    },
+                    show: false,
+                    tick: {
+                        outer: false
+                    }
+                },
+                x: {
+                    padding: {
+                        left: 0,
+                        right: 0
+                    },
+                    show: false
+                }
+            },
+            legend: {
+                position: 'inset',
+                padding: 0,
+                inset: {
+                    anchor: 'top-left',
+                    x: 20,
+                    y: 8,
+                    step: 10
+                }
+            },
+            tooltip: {
+                format: {
+                    title: function (x) {
+                        return '';
+                    }
+                }
+            },
+            padding: {
+                bottom: 0,
+                left: -1,
+                right: -1
+            },
+            point: {
+                show: false
+            }
+        });
+    });
+});
+
+require(['c3', 'jquery'], function(c3, $) {
+    $(document).ready(function(){
+        var chart = c3.generate({
+            bindto: '#chart-donut', // id of chart wrapper
+            data: {
+                columns: [
+                    // each columns data
+                    ['data1', 63],
+                    ['data2', 37]
+                ],
+                type: 'donut', // default type of chart
+                colors: {
+                    'data1': tabler.colors["green"],
+                    'data2': tabler.colors["green-light"]
+                },
+                names: {
+                    // name of each serie
+                    'data1': 'Maximum',
+                    'data2': 'Minimum'
+                }
+            },
+            axis: {
+            },
+            legend: {
+                show: false, //hide legend
+            },
+            padding: {
+                bottom: 0,
+                top: 0
+            },
+        });
+    });
+});
+</script>
