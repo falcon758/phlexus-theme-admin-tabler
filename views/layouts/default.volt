@@ -1,4 +1,4 @@
-{% extends 'layouts/base.volt' %}
+{% extends defaultBaseLayout %}
 
 {% block content %}
 <div class="page-main">
