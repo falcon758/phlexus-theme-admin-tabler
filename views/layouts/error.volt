@@ -1,4 +1,4 @@
-{% extends defaultBaseLayout %}
+{% extends 'base.volt' %}
 
 <div class="page-content">
     <div class="container text-center">
