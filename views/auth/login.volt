@@ -1,6 +1,3 @@
-{% extends 'layouts/base.volt' %}
-
-{% block content %}
 <div class="page-single">
     <div class="container">
         <div class="row">
@@ -40,4 +37,3 @@
         </div>
     </div>
 </div>
-{% endblock %}
