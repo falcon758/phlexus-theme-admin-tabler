@@ -1,4 +1,4 @@
-{% set publicAdminThemePath = '/assets/themes/phlexus-tabler-base-admin-theme' %}
+{% set publicAdminThemePath = '/assets/themes/phlexus-tabler-base-admin' %}
 <!doctype html>
 <html>
 <head>
@@ -23,7 +23,7 @@
 
 <body>
 <div class="page">
-    {% block content %}{% endblock %}
+    {{ content() }}
 </div>
 
 </body>
