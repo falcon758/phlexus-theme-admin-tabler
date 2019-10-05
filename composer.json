@@ -1,4 +1,5 @@
 {
     "name": "phlexus/phlexus-tabler-base-admin-theme",
-    "description": "Phlexus Base Admin Theme"
+    "description": "Phlexus Base Admin Theme",
+    "license": "BSD-3-Clause"
 }
