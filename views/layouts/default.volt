@@ -1,4 +1,4 @@
-{% set publicAdminThemePath = '/assets/themes/phlexus-tabler-base-admin' %}
+{% set publicAdminThemePath = '/assets/themes/phlexus-tabler-admin' %}
 <!doctype html>
 <html>
 <head>

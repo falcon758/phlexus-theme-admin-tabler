@@ -1,3 +1,3 @@
 requirejs.config({
-    baseUrl: '/assets/themes/phlexus-tabler-base-admin'
+    baseUrl: '/assets/themes/phlexus-tabler-admin'
 });
