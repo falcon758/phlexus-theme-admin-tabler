@@ -28,7 +28,7 @@
             <div class="container">
                 <div class="d-flex">
                     <a class="header-brand" href="/admin">
-                        <img src="https://tabler.io/img/tabler.svg" class="header-brand-img" alt="tabler logo">
+                        <img src="{{ publicAdminThemePath }}/images/logo/phlexus.svg" class="header-brand-img" alt="phlexus logo">
                     </a>
 
                     <div class="d-flex order-lg-2 ml-auto">
