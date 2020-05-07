@@ -20,8 +20,10 @@
     <script src="{{ publicAdminThemePath }}/plugins/input-mask/plugin.js"></script>
     <script src="{{ publicAdminThemePath }}/plugins/datatables/plugin.js"></script>
 </head>
-
 <body>
+
+{{ flash.output() }}
+
 <div class="page">
     {{ content() }}
 </div>
