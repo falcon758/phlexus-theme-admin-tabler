@@ -1,4 +1,4 @@
-{% set publicAdminThemePath = '/assets/themes/phlexus-tabler-admin' %}
+{% set publicUserThemePath = '/assets/themes/phlexus-tabler-admin' %}
 <!doctype html>
 <html>
     <head>
@@ -8,17 +8,17 @@
 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
-        <link rel="stylesheet" href="{{ publicAdminThemePath }}/css/dashboard.css">
-        <link rel="stylesheet" href="{{ publicAdminThemePath }}/plugins/charts-c3/plugin.css">
-        <link rel="stylesheet" href="{{ publicAdminThemePath }}/plugins/maps-google/plugin.css">
+        <link rel="stylesheet" href="{{ publicUserThemePath }}/css/dashboard.css">
+        <link rel="stylesheet" href="{{ publicUserThemePath }}/plugins/charts-c3/plugin.css">
+        <link rel="stylesheet" href="{{ publicUserThemePath }}/plugins/maps-google/plugin.css">
 
-        <script src="{{ publicAdminThemePath }}/js/require.min.js"></script>
-        <script src="{{ publicAdminThemePath }}/js/require.config.js"></script>
-        <script src="{{ publicAdminThemePath }}/js/dashboard.js"></script>
-        <script src="{{ publicAdminThemePath }}/plugins/charts-c3/plugin.js"></script>
-        <script src="{{ publicAdminThemePath }}/plugins/maps-google/plugin.js"></script>
-        <script src="{{ publicAdminThemePath }}/plugins/input-mask/plugin.js"></script>
-        <script src="{{ publicAdminThemePath }}/plugins/datatables/plugin.js"></script>
+        <script src="{{ publicUserThemePath }}/js/require.min.js"></script>
+        <script src="{{ publicUserThemePath }}/js/require.config.js"></script>
+        <script src="{{ publicUserThemePath }}/js/dashboard.js"></script>
+        <script src="{{ publicUserThemePath }}/plugins/charts-c3/plugin.js"></script>
+        <script src="{{ publicUserThemePath }}/plugins/maps-google/plugin.js"></script>
+        <script src="{{ publicUserThemePath }}/plugins/input-mask/plugin.js"></script>
+        <script src="{{ publicUserThemePath }}/plugins/datatables/plugin.js"></script>
     </head>
 
     <body>
@@ -28,7 +28,7 @@
                     <div class="container">
                         <div class="d-flex">
                             <a class="header-brand" href="/admin">
-                                <img src="{{ publicAdminThemePath }}/images/logo/phlexus.svg" class="header-brand-img" alt="phlexus logo">
+                                <img src="{{ publicUserThemePath }}/images/logo/phlexus.svg" class="header-brand-img" alt="phlexus logo">
                             </a>
 
                             <div class="d-flex order-lg-2 ml-auto">
@@ -123,7 +123,7 @@
                             <div class="col-lg order-lg-first">
                                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                                     <li class="nav-item">
-                                        <a href="/admin" class="nav-link active"><i class="fe fe-home"></i> Home</a>
+                                        <a href="/user" class="nav-link active"><i class="fe fe-home"></i> Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">
@@ -205,7 +205,7 @@
                             <div class="row">
                                 <div class="col-6 col-md-3">
                                     <ul class="list-unstyled mb-0">
-                                        <li><a href="/admin">Home</a></li>
+                                        <li><a href="/user">Home</a></li>
                                         <li><a href="#">Second link</a></li>
                                     </ul>
                                 </div>
