@@ -794,7 +794,7 @@
                 </div>
                 <table class="table card-table">
                     <tr>
-                        <td>Admin Template</td>
+                        <td>User Template</td>
                         <td class="text-right">
                             <span class="badge badge-default">65%</span>
                         </td>

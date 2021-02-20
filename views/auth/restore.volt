@@ -19,7 +19,7 @@
                     </div>
                 </form>
                 <div class="text-center text-muted">
-                    Forget it, <a href="/admin/auth/login">send me back</a> to the sign in screen.
+                    Forget it, <a href="/user/auth/login">send me back</a> to the sign in screen.
                 </div>
             </div>
         </div>
