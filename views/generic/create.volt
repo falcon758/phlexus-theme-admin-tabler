@@ -1,13 +1,8 @@
-{% include 'generic/fields.volt' %}
-
-{% for field in fields %}
-    <div>
-        <span>
+<form action="" method="post">
+    {% for field in form.getFields() %}
+        <div class="form-field">
             <label for="{{ field.name }}">{{ field.name }}</label>
-        </span>
-
-        {{ input(field.name, '') }}
-    </div>
-{% endfor %}
-
-
+            {{ form.render(field.name) }}
+        </div>
+    {% endfor %}
+</form>
