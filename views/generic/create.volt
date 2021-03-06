@@ -1,6 +1,6 @@
 
 {{
-    form('user/users/save')
+    form(saveRoute)
 }}
     {{ form.render(security.getTokenKey()) }}
 
