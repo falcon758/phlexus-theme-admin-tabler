@@ -26,7 +26,7 @@
                                         <div>{{ record[name] }}</div>
                                     </td>
                                     {% endfor %}
-                                    <td class="text-center">
+                                    <td>
                                         <div class="item-action dropdown">
                                             <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i class="fe fe-more-vertical"></i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
