@@ -6,7 +6,10 @@
 
     {% for field in form.getFields() %}
         <div class="form-field">
-            <label for="{{ field['name'] }}">{{ field['name'] }}</label>
+            {% if field['type'] !== 'Phalcon\Forms\Element\Hidden' %}
+                <label for="{{ field['name'] }}">{{ field['name'] }}</label>
+            {% endif  %}
+            
             {{ form.render(field['name']) }}
         </div>
     {% endfor %}
