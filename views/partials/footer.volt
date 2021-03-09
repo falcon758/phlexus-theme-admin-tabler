@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-6 col-md-3">
                         <ul class="list-unstyled mb-0">
-                            <li><a href="/user">Home</a></li>
+                            <li><a href="{{ url('/user') }}">Home</a></li>
                             <li><a href="#">Second link</a></li>
                         </ul>
                     </div>
@@ -29,9 +29,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mt-4 mt-lg-0">
-                Premium and Open Source dashboard template with responsive and high quality UI. For Free!
-            </div>
         </div>
     </div>
 </div>
@@ -53,7 +50,7 @@
                 </div>
             </div>F
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
-                Copyright © 2019 All rights reserved. Theme <a href="https://tabler.io/">Tabler</a>
+                Copyright © {{ date('Y') }} All rights reserved. Theme <a href="https://tabler.io/">Tabler</a>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="d-flex">
             <a class="header-brand" href="/user">
-                <img src="{{ publicUserThemePath }}/images/logo/phlexus.svg" class="header-brand-img" alt="phlexus logo">
+                <img src="{{ url(publicUserThemePath ~ '/images/logo/phlexus.svg') }}" class="header-brand-img" alt="phlexus logo">
             </a>
 
             <div class="d-flex order-lg-2 ml-auto">
@@ -68,7 +68,7 @@
                         <a class="dropdown-item" href="#">
                             <i class="dropdown-icon fe fe-help-circle"></i> Need help?
                         </a>
-                        <a class="dropdown-item" href="/user/auth/logout">
+                        <a class="dropdown-item" href="{{ url('/user/auth/logout') }}">
                             <i class="dropdown-icon fe fe-log-out"></i> Sign out
                         </a>
                     </div>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="d-flex">
                 <a class="header-brand" href="/user">
-                    <img src="{{ publicUserThemePath }}/images/logo/phlexus.svg" class="header-brand-img" alt="phlexus logo">
+                    <img src="{{ url(publicUserThemePath ~ '/images/logo/phlexus.svg') }}" class="header-brand-img" alt="phlexus logo">
                 </a>
 
                 <div class="d-flex order-lg-2 ml-auto">

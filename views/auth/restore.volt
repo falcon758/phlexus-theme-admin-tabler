@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col col-login mx-auto">
                 <div class="text-center mb-6">
-                    <img src="/assets/themes/phlexus-tabler-admin/images/logo/phlexus.svg" class="h-6" alt="">
+                    <img src="{{ url('/assets/themes/phlexus-tabler-admin/images/logo/phlexus.svg') }}" class="h-6" alt="">
                 </div>
-                <form class="card" action="" method="post">
+                <form class="card" action="{{ url('/user/auth/doRestore') }}" method="post">
                     <div class="card-body p-6">
                         <div class="card-title">Forgot password</div>
                         <p class="text-muted">Enter your email address and your password will be reset and emailed to you.</p>
