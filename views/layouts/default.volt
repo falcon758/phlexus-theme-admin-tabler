@@ -1,4 +1,3 @@
-{% set publicUserThemePath = '/assets/themes/phlexus-tabler-admin' %}
 <!doctype html>
 <html>
     <head>
