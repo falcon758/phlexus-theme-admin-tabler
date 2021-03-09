@@ -6,12 +6,12 @@
     </head>
 
     <body>
+        {{ partial('partials/header') }}
+
+        {{ partial('partials/nav') }}
+        
         <div class="page">
             <div class="page-main">
-                {{ partial('partials/header') }}
-
-                {{ partial('partials/nav') }}
-
                 <div class="my-3 my-md-5">
                     {% if pageTitle is defined %}
                         <div class="container">
@@ -24,8 +24,8 @@
                     {{ content() }}
                 </div>
             </div>
-
-            {{ partial('partials/footer') }}
         </div>
+
+        {{ partial('partials/footer') }}
     </body>
 </html>

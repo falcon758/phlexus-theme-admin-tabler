@@ -11701,7 +11701,6 @@ img {
   flex-direction: column;
   -ms-flex-pack: center;
   justify-content: center;
-  min-height: 100%;
 }
 
 body.fixed-header .page {
