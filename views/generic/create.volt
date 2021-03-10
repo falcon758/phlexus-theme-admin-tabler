@@ -1,7 +1,5 @@
 
-{{
-    form(saveRoute)
-}}
+{{ form(saveRoute) }}
     {{ form.render(security.getTokenKey()) }}
 
     {% for field in form.getFields() %}

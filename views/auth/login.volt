@@ -5,19 +5,19 @@
                 <div class="text-center mb-6">
                     <img src="{{ url('/assets/themes/phlexus-tabler-admin/images/logo/phlexus.svg') }}" class="h-6" alt="">
                 </div>
-                <form class="card" action="{{ url('/user/auth/doLogin') }}" method="post">
+                {{ form('/user/auth/doLogin', 'method': 'post', 'class': 'card') }}
                     <div class="card-body p-6">
                         <div class="card-title">Login to your account</div>
                         <div class="form-group">
                             <label class="form-label">Email address</label>
-                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            {{ form.render('email') }}
                         </div>
                         <div class="form-group">
                             <label class="form-label">
                                 Password
                                 <a href="{{ url('/user/auth/remind') }}" class="float-right small">I forgot password</a>
                             </label>
-                            <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            {{ form.render('password') }}
                         </div>
                         <div class="form-group">
                             <label class="custom-control custom-checkbox">
@@ -29,7 +29,7 @@
                             <button type="submit" class="btn btn-primary btn-block">Sign in</button>
                         </div>
                     </div>
-                </form>
+                {{ end_form() }}
                 <div class="text-center text-muted">
                     Don't have account yet? <a href="{{ url('/user/register') }}">Sign up</a>
                 </div>
