@@ -6,6 +6,8 @@
                     <img src="{{ url('/assets/themes/phlexus-tabler-admin/images/logo/phlexus.svg') }}" class="h-6" alt="">
                 </div>
                 {{ form('/user/auth/doLogin', 'method': 'post', 'class': 'card') }}
+                    {{ form.render(security.getTokenKey()) }}
+                    
                     <div class="card-body p-6">
                         <div class="card-title">Login to your account</div>
                         <div class="form-group">
