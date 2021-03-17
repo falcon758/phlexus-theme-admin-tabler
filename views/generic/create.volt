@@ -1,4 +1,4 @@
-<div class="col mx-auto">
+<div class="container">
     <div class="row row-cards">
         <div class="col-12">
             {{ form(saveRoute, 'class': 'card') }}
