@@ -4,7 +4,7 @@
             {{ form(saveRoute, 'class': 'card') }}
             
                 <div class="card-header">
-                    <h4 class="card-title">Edit</h4>
+                    <h4 class="card-title">Create</h4>
                 </div>
 
                 {{ form.render(security.getTokenKey()) }}
