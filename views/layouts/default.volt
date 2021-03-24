@@ -1,3 +1,5 @@
+{% set publicUserThemePath = assetsPath() %}
+
 <!doctype html>
 <html>
     <head>

@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col col-login mx-auto">
                 <div class="text-center mb-6">
-                    <img src="{{ url('/assets/themes/phlexus-tabler-admin/images/logo/phlexus.svg') }}" class="h-6" alt="">
+                    <img src="{{ assetsPath() ~ 'images/logo/phlexus.svg' }}" class="h-6" alt="">
                 </div>
                 {{ form('/user/auth/doLogin', 'method': 'post', 'class': 'card') }}
                     {{ form.render(security.getTokenKey()) }}

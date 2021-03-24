@@ -1,5 +1,3 @@
-{% set publicUserThemePath = '/assets/themes/phlexus-tabler-admin' %}
-
 <meta charset="UTF-8">
 
 <title>{{ get_title() }}</title>
