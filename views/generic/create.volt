@@ -7,8 +7,6 @@
                     <h4 class="card-title">Create</h4>
                 </div>
 
-                {{ form.render(security.getTokenKey()) }}
-
                 <div class="card-body">
                     {% for field in form.getFields() %}
                         <div class="row">

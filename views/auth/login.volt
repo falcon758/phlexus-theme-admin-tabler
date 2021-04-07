@@ -6,7 +6,7 @@
                     <img src="{{ assetsPath() ~ 'images/logo/phlexus.svg' }}" class="h-6" alt="">
                 </div>
                 {{ form('/user/auth/doLogin', 'method': 'post', 'class': 'card') }}
-                    {{ form.render(security.getTokenKey()) }}
+                    {{ form.render('csrf') }}
                     
                     <div class="card-body p-6">
                         <div class="card-title">Login to your account</div>
