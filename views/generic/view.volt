@@ -18,7 +18,7 @@
                                 <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody csrf-token="{{ csrfToken }}">
                             {% for record in records %}
                                 {% set recordId = record['id'] %}
                                 <tr record-id="{{ recordId }}">
@@ -29,11 +29,17 @@
                                     {% endfor %}
                                     <td>
                                         <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i class="fe fe-more-vertical"></i></a>
+                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon">
+                                                <i class="fe fe-more-vertical"></i>
+                                            </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="{{ url(defaultRoute ~ '/edit/' ~ recordId) }}" class="dropdown-item edit-item"><i class="dropdown-icon fe fe-edit-2"></i> Edit</a>
+                                                <a href="{{ url(defaultRoute ~ '/edit/' ~ recordId) }}" class="dropdown-item edit-item">
+                                                    <i class="dropdown-icon fe fe-edit-2"></i> Edit
+                                                </a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ url(defaultRoute ~ '/delete/' ~ recordId) }}"><i class="dropdown-icon fe fe-trash"></i> Delete</a>
+                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ url(defaultRoute ~ '/delete/' ~ recordId) }}">
+                                                    <i class="dropdown-icon fe fe-trash"></i> Delete
+                                                </a>
                                             </div>
                                         </div>
                                     </td>
