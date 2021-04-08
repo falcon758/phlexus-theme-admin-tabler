@@ -10,7 +10,7 @@
 
             $.post(route, 'csrf=' + csrf, function(response) {
                 if(response.status === 1) {
-                    row.delete();
+                    row.remove();
                 }
             });
         }
