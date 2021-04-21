@@ -5,7 +5,7 @@
                 <div class="text-center mb-6">
                     <img src="{{ assetsPath() ~ 'images/logo/phlexus.svg' }}" class="h-6" alt="">
                 </div>
-                {{ form('/user/auth/doRemindMe', 'method': 'post', 'class': 'card') }}
+                {{ form('/user/auth/doRemind', 'method': 'post', 'class': 'card') }}
                     {{ form.render('csrf') }}
                     
                     <div class="card-body p-6">
