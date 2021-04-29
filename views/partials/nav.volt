@@ -1,3 +1,5 @@
+{% set currentPage = request.getQuery()['_url'] %}
+
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
     <div class="container">
         <div class="row align-items-center">
@@ -13,16 +15,22 @@
             <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="{{ url('user') }}" class="nav-link active"><i class="fe fe-home"></i> Home</a>
+                        <a href="{{ url('user') }}" class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
+                            <i class="fe fe-home"></i> Home 
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link" data-toggle="dropdown">
+                        <a href="javascript:void(0)" class="nav-link 
+                            {{ (currentPage === '/user/users' or currentPage === '/user/users/create') ? 'active' : '' }}" 
+                            data-toggle="dropdown">
                             <i class="fe fe-user"></i> Users
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-arrow">
-                            <a href="{{ url('user/users') }}" class="dropdown-item">List</a>
-                            <a href="{{ url('user/users/create') }}" class="dropdown-item">Create</a>
+                            <a href="{{ url('user/users') }}" 
+                                class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">List</a>
+                            <a href="{{ url('user/users/create') }}" 
+                                class="dropdown-item {{ currentPage === '/user/users/create' ? 'active' : '' }}">Create</a>
                         </div>
                     </li>
                 </ul>
