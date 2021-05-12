@@ -20,7 +20,7 @@
                     </div>
                 {{ end_form() }}
                 <div class="text-center text-muted">
-                    Go back to <a href="{{ url('/user/login') }}">Login</a>
+                    Go back to <a href="{{ url('/user/auth') }}">Login</a>
                 </div>
             </div>
         </div>
