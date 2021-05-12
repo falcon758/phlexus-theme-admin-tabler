@@ -7,7 +7,8 @@
                 </div>
                 {{ form('/user/auth/doRecover', 'method': 'post', 'class': 'card') }}
                     {{ form.render('csrf') }}
-                    
+                    {{ form.render('hash_code') }}
+
                     <div class="card-body p-6">
                         <div class="card-title">Password Recover</div>
                         <div class="form-group">
