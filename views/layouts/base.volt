@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
     <head>
-        {{ partial('partials/head') }}
+        {{ partial('partials/head-base') }}
     </head>
 
     <body>
