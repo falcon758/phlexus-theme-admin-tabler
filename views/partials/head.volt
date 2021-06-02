@@ -15,3 +15,4 @@
 <script src="{{ url(publicUserThemePath ~ '/plugins/maps-google/plugin.js') }}"></script>
 <script src="{{ url(publicUserThemePath ~ '/plugins/input-mask/plugin.js') }}"></script>
 <script src="{{ url(publicUserThemePath ~ '/plugins/datatables/plugin.js') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js?hl=en"></script>

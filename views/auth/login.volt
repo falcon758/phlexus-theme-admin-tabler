@@ -7,7 +7,8 @@
                 </div>
                 {{ form('/user/auth/doLogin', 'method': 'post', 'class': 'card') }}
                     {{ form.render('csrf') }}
-                    
+                    {{ form.render('captcha') }}
+
                     <div class="card-body p-6">
                         <div class="card-title">Login to your account</div>
                         <div class="form-group">
