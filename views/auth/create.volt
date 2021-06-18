@@ -22,6 +22,9 @@
                             <label class="form-label">Repeate Password</label>
                             {{ form.render('repeat_password') }}
                         </div>
+
+                        {{ form.render('g-recaptcha-response') }}
+
                         <div class="form-footer">
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </div>

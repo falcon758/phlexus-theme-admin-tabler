@@ -14,6 +14,9 @@
                             <label class="form-label">Email address</label>
                             {{ form.render('email') }}
                         </div>
+
+                        {{ form.render('g-recaptcha-response') }}
+
                         <div class="form-footer">
                             <button type="submit" class="btn btn-primary btn-block">Remind Me</button>
                         </div>
