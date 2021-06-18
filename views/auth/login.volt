@@ -7,7 +7,6 @@
                 </div>
                 {{ form('/user/auth/doLogin', 'method': 'post', 'class': 'card') }}
                     {{ form.render('csrf') }}
-                    {{ form.render('captcha') }}
 
                     <div class="card-body p-6">
                         <div class="card-title">Login to your account</div>
@@ -28,6 +27,9 @@
                                 <span class="custom-control-label">Remember me</span>
                             </label>
                         </div>
+
+                        {{ form.render('g-recaptcha-response') }}
+                        
                         <div class="form-footer">
                             <button type="submit" class="btn btn-primary btn-block">Sign in</button>
                         </div>
