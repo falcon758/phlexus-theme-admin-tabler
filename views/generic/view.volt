@@ -45,6 +45,11 @@
                                     </td>
                                 </tr>
                             {% endfor %}
+                            {% if records|length == 0 %}
+                                <tr>
+                                    <td colspan="2">No records found</td>
+                                </tr>
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>

@@ -42,6 +42,11 @@
                                     </td>
                                 </tr>
                             {% endfor %}
+                            {% if products|length == 0 %}
+                                <tr>
+                                    <td colspan="2">No products found</td>
+                                </tr>
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>
