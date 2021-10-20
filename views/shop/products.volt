@@ -16,7 +16,7 @@
                     <div class="card-body p-3 text-center">
                         <div class="h3 mt-auto">Product Image</div>
                         <div class="text-muted mb-4">
-                            <a href="#" class="btn btn-outline-primary">Buy</a>
+                            <btn class="btn btn-outline-primary">Buy</btn>
                         </div>
                     </div>
                 </div>
