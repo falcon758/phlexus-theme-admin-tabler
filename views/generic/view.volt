@@ -37,7 +37,7 @@
                                                     <i class="dropdown-icon fe fe-edit-2"></i> Edit
                                                 </a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ url(defaultRoute ~ '/delete/' ~ recordId) }}">
+                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ defaultRoute ~ '/delete/' ~ recordId }}">
                                                     <i class="dropdown-icon fe fe-trash"></i> Delete
                                                 </a>
                                             </div>
