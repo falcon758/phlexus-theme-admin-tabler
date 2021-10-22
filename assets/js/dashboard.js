@@ -1,5 +1,6 @@
 require.config({
     shim: {
+        'products': ['jquery'],
         'actions': ['jquery'],
         'bootstrap': ['jquery'],
         'sparkline': ['jquery'],
@@ -21,6 +22,7 @@ require.config({
         'vector-map-world': 'js/vendors/jquery-jvectormap-world-mill',
         'circle-progress': 'js/vendors/circle-progress.min',
         'actions': 'js/generic/actions',
+        'products': 'js/shop/products',
     }
 });
 
@@ -126,4 +128,4 @@ window.tabler = {
     }
 };
 
-require(['core', 'actions']);
+require(['core', 'actions', 'products']);

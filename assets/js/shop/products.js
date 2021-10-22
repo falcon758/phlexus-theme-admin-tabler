@@ -2,8 +2,6 @@
 (function($) {
     $('.card .product-buy').on('click', function () {
         const row = $(this).parents('.row-cards');
-        //const productID = row.find('.product').attr('product-id');
-
         const route = $(this).attr('buy-route');
         const csrf = row.attr('csrf-token');
 

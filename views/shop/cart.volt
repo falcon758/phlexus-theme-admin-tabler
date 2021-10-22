@@ -33,7 +33,6 @@
                                                 <i class="fe fe-more-vertical"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <div class="dropdown-divider"></div>
                                                 <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ url('/cart/delete/' ~ productId) }}">
                                                     <i class="dropdown-icon fe fe-trash"></i> Delete
                                                 </a>

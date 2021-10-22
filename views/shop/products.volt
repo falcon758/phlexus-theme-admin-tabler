@@ -5,7 +5,7 @@
         </h1>
     </div>
 
-    <div class="row row-cards"  csrf-token="{{ csrfToken }}">
+    <div class="row row-cards" csrf-token="{{ csrfToken }}">
         {% for product in products %}
             {% set productId = product['id'] %}
             <div class="col-6 col-sm-4 col-lg-2 product" product-id="{{ productId }}">
