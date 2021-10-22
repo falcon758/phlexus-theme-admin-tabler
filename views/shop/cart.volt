@@ -20,7 +20,7 @@
                         <tbody csrf-token="{{ csrfToken }}">
                             {% for product in products %}
                                 {% set productId = product['id'] %}
-                                <tr product-id="{{ productId }}">
+                                <tr record-id="{{ productId }}">
                                     <td>
                                         <div>{{ product['name'] }}</div>
                                     </td>
@@ -33,7 +33,7 @@
                                                 <i class="fe fe-more-vertical"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ url('/cart/delete/' ~ productId) }}">
+                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ '/cart/delete/' ~ productId }}">
                                                     <i class="dropdown-icon fe fe-trash"></i> Delete
                                                 </a>
                                             </div>
