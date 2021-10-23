@@ -21,7 +21,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="nav-link 
-                            {{ (currentPage === '/user/users' or currentPage === '/user/users/create') ? 'active' : '' }}" 
+                            {{ (currentPage === '/user/users' or currentPage === '/user/create') ? 'active' : '' }}" 
                             data-toggle="dropdown">
                             <i class="fe fe-user"></i> Users
                         </a>
@@ -29,8 +29,8 @@
                         <div class="dropdown-menu dropdown-menu-arrow">
                             <a href="{{ url('user/users') }}" 
                                 class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">List</a>
-                            <a href="{{ url('user/users/create') }}" 
-                                class="dropdown-item {{ currentPage === '/user/users/create' ? 'active' : '' }}">Create</a>
+                            <a href="{{ url('user/create') }}" 
+                                class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">Create</a>
                         </div>
                     </li>
                 </ul>
