@@ -50,7 +50,7 @@
                     </table>
                 </div>
                 {% if products|length > 0 %}
-                    <btn class="btn btn-outline-primary product-buy" checkout-route="{{ checkoutRoute }}">Checkout</btn>
+                    <a class="btn btn-outline-primary product-buy" href="{{ checkoutRoute }}">Checkout</a>
                 {% endif %}
             </div>
         </div>
