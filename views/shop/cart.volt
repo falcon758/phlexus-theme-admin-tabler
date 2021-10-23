@@ -49,6 +49,9 @@
                         </tbody>
                     </table>
                 </div>
+                {% if products|length > 0 %}
+                    <btn class="btn btn-outline-primary product-buy" checkout-route="{{ checkoutRoute }}">Checkout</btn>
+                {% endif %}
             </div>
         </div>
     </div>
