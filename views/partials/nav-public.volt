@@ -15,7 +15,7 @@
             <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="{{ url('/') }}" class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
+                        <a href="{{ url('/home') }}" class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
                             <i class="fe fe-home"></i> Home 
                         </a>
                     </li>
