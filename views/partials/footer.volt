@@ -48,7 +48,7 @@
                         <a href="https://github.com/phlexus" class="btn btn-outline-primary btn-sm">Source code</a>
                     </div>
                 </div>
-            </div>F
+            </div>
             <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
                 Copyright © {{ date('Y') }} All rights reserved.
             </div>
