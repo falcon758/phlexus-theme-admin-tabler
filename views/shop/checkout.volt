@@ -60,7 +60,6 @@
                     <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
                         <tbody>
                             {% for product in products %}
-                                {% set productId = product['id'] %}
                                 <tr>
                                     <td>
                                         <div>{{ product['name'] }}</div>
