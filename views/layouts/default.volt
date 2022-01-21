@@ -14,6 +14,8 @@
         <div class="page">
             <div class="page-main">
                 <div class="my-3 my-md-5">
+                    {{ flash.output() }}
+
                     {% if pageTitle is defined %}
                         <div class="container">
                             <div class="page-header">

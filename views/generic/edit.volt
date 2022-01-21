@@ -11,14 +11,15 @@
 
                 <div class="card-body">
                     {% for field in form.getFields() %}
+                        {% set field_name = field['name'] %}
                         <div class="row">
                             <div class="col-md-6 col-xl-12">
                                 <div class="form-field">
                                     {% if field['type'] !== 'Phalcon\Forms\Element\Hidden' %}
-                                        <label class="form-label" for="{{ field['name'] }}">{{ field['name'] }}</label>
+                                        <label class="form-label" for="{{ field_name}}">{{ field_name }}</label>
                                     {% endif  %}
                                     
-                                    {{ form.render(field['name'], ['class': 'form-control']) }}
+                                    {{ form.render(field_name, ['class': 'form-control']) }}
                                 </div>
                             </div>
                         </div>
