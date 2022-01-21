@@ -12,10 +12,14 @@
         {{ partial('partials/nav') }}
         
         <div class="page">
+            {% if flash.has('error') %}
+                <div class="alert alert-warning">
+                    {{ flash.output() }}
+                </div>
+            {% endif %}
+
             <div class="page-main">
                 <div class="my-3 my-md-5">
-                    {{ flash.output() }}
-
                     {% if pageTitle is defined %}
                         <div class="container">
                             <div class="page-header">
