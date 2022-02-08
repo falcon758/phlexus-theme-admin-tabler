@@ -4,7 +4,7 @@
             {{ form(saveRoute, 'class': 'card') }}
             
                 <div class="card-header">
-                    <h4 class="card-title">Create</h4>
+                    <h4 class="card-title">{{ tType._('title-create') }}</h4>
                 </div>
 
                 {{ form.render('csrf') }}
@@ -28,8 +28,8 @@
 
                 <div class="card-footer text-end">
                     <div class="d-flex">
-                        <a href="{{ url(defaultRoute) }}" class="btn btn-link">Cancel</a>
-                        {{ submit_button('Save') }}
+                        <a href="{{ url(defaultRoute) }}" class="btn btn-link">{{ tType._('link-cancel') }}</a>
+                        {{ submit_button(tType._('button-save')) }}
                     </div>
                 </div>
 

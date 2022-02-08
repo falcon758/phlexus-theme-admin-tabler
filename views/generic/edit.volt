@@ -4,7 +4,7 @@
             {{ form(saveRoute, 'class': 'card') }}
             
                 <div class="card-header">
-                    <h4 class="card-title">Edit</h4>
+                    <h4 class="card-title">{{ tType._('title-edit') }}</h4>
                 </div>
 
                 {{ form.render('csrf') }}
@@ -16,7 +16,7 @@
                             <div class="col-md-6 col-xl-12">
                                 <div class="form-field">
                                     {% if field['type'] !== 'Phalcon\Forms\Element\Hidden' %}
-                                        <label class="form-label" for="{{ field_name}}">{{ field_name }}</label>
+                                        <label class="form-label" for="{{ field_name}}">{{ tType._('field-' ~ field_name) }}</label>
                                     {% endif  %}
                                     
                                     {{ form.render(field_name, ['class': 'form-control']) }}
@@ -28,8 +28,8 @@
 
                 <div class="card-footer text-end">
                     <div class="d-flex">
-                        <a href="{{ url(defaultRoute) }}" class="btn btn-link">Cancel</a>
-                        {{ submit_button('Save') }}
+                        <a href="{{ url(defaultRoute) }}" class="btn btn-link">{{ tType._('link-cancel') }}</a>
+                        {{ submit_button(tType._('button-save')) }}
                     </div>
                 </div>
 
