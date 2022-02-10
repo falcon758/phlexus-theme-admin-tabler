@@ -43,7 +43,7 @@
                             {% endfor %}
                             {% if products|length == 0 %}
                                 <tr>
-                                    <td colspan="2">No products found</td>
+                                    <td colspan="3">No products found</td>
                                 </tr>
                             {% endif %}
                         </tbody>
