@@ -20,8 +20,8 @@
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
                             {% for record in records %}
-                                {% set recordId = record['id'] %}
-                                <tr record-id="{{ recordId }}">
+                                {% set recordID = record['id'] %}
+                                <tr record-id="{{ recordID }}">
                                     {% for name in display %}
                                     <td>
                                         <div>{{ record[name] }}</div>
@@ -33,11 +33,11 @@
                                                 <i class="fe fe-more-vertical"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="{{ url(defaultRoute ~ '/edit/' ~ recordId) }}" class="dropdown-item edit-item">
+                                                <a href="{{ url(defaultRoute ~ '/edit/' ~ recordID) }}" class="dropdown-item edit-item">
                                                     <i class="dropdown-icon fe fe-edit-2"></i> {{ translationPage._('link-edit') }}
                                                 </a>
                                                 <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ defaultRoute ~ '/delete/' ~ recordId }}">
+                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ defaultRoute ~ '/delete/' ~ recordID }}">
                                                     <i class="dropdown-icon fe fe-trash"></i> {{ translationPage._('link-delete') }}
                                                 </a>
                                             </div>

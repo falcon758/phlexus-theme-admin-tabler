@@ -7,8 +7,8 @@
 
     <div class="row row-cards" csrf-token="{{ csrfToken }}">
         {% for product in products %}
-            {% set productId = product['id'] %}
-            <div class="col-6 col-sm-4 col-lg-2 product" product-id="{{ productId }}">
+            {% set productID = product['id'] %}
+            <div class="col-6 col-sm-4 col-lg-2 product" product-id="{{ productID }}">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">{{ product['name'] }}</h3>
@@ -16,7 +16,7 @@
                     <div class="card-body p-3 text-center">
                         <div class="h3 mt-auto">Product Image</div>
                         <div class="mb-4">
-                            <btn class="btn btn-outline-primary product-buy"  buy-route="{{ saveRoute ~ productId }}">Buy</btn>
+                            <btn class="btn btn-outline-primary product-buy"  buy-route="{{ saveRoute ~ productID }}">Buy</btn>
                         </div>
                     </div>
                 </div>
