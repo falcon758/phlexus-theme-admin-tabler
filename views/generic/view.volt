@@ -1,7 +1,7 @@
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
-            {{ tType._('title-view') }}
+            {{ translationPage._('title-view') }}
         </h1>
     </div>
 
@@ -13,9 +13,9 @@
                         <thead>
                             <tr>
                                 {% for name in display %}
-                                    <th>{{ tType._('table-' ~ name) }}</th>
+                                    <th>{{ translationPage._('table-' ~ name) }}</th>
                                 {% endfor %}
-                                <th>{{ tType._('table-actions') }}</th>
+                                <th>{{ translationPage._('table-actions') }}</th>
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
@@ -34,11 +34,11 @@
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="{{ url(defaultRoute ~ '/edit/' ~ recordId) }}" class="dropdown-item edit-item">
-                                                    <i class="dropdown-icon fe fe-edit-2"></i> {{ tType._('link-edit') }}
+                                                    <i class="dropdown-icon fe fe-edit-2"></i> {{ translationPage._('link-edit') }}
                                                 </a>
                                                 <div class="dropdown-divider"></div>
                                                 <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ defaultRoute ~ '/delete/' ~ recordId }}">
-                                                    <i class="dropdown-icon fe fe-trash"></i> {{ tType._('link-delete') }}
+                                                    <i class="dropdown-icon fe fe-trash"></i> {{ translationPage._('link-delete') }}
                                                 </a>
                                             </div>
                                         </div>
@@ -47,7 +47,7 @@
                             {% endfor %}
                             {% if records|length == 0 %}
                                 <tr>
-                                    <td colspan="2">{{ tType._('row-no-records') }}</td>
+                                    <td colspan="2">{{ translationPage._('row-no-records') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>
