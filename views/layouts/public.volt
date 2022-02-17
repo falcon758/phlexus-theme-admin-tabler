@@ -14,11 +14,7 @@
         <div class="page">
             <div class="page-main">
                 <div class="my-3 my-md-5">
-                    {% if flash.has('error') %}
-                        <div class="alert alert-warning">
-                            {{ flash.output() }}
-                        </div>
-                    {% endif %}
+                    <div class="alert alert-warning">{{ flash.output() }}</div>
 
                     {% if pageTitle is defined %}
                         <div class="container">

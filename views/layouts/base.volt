@@ -7,11 +7,7 @@
     </head>
 
     <body>
-        {% if flash.has('error') %}
-            <div class="alert alert-warning">
-                {{ flash.output() }}
-            </div>
-        {% endif %}
+        <div class="alert alert-warning">{{ flash.output() }}</div>
 
         <div class="page">
             {{ content() }}
