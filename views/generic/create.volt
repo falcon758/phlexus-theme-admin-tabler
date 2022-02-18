@@ -4,7 +4,7 @@
             {{ form(saveRoute, 'class': 'card') }}
             
                 <div class="card-header">
-                    <h4 class="card-title">{{ translationPage._('title-create') }}</h4>
+                    <h4 class="card-title">{{ translation._('title-create') }}</h4>
                 </div>
 
                 {{ form.render('csrf') }}
@@ -28,8 +28,8 @@
 
                 <div class="card-footer text-end">
                     <div class="d-flex">
-                        <a href="{{ url(defaultRoute) }}" class="btn btn-link">{{ translationPage._('link-cancel') }}</a>
-                        {{ submit_button(translationPage._('button-save')) }}
+                        <a href="{{ url(defaultRoute) }}" class="btn btn-link">{{ translation._('link-cancel') }}</a>
+                        {{ submit_button(translation._('button-save')) }}
                     </div>
                 </div>
 
