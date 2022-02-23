@@ -1,5 +1,6 @@
 require.config({
     shim: {
+        'flashMessage': ['jquery'],
         'products': ['jquery'],
         'actions': ['jquery'],
         'bootstrap': ['jquery'],
@@ -23,6 +24,7 @@ require.config({
         'circle-progress': 'js/vendors/circle-progress.min',
         'actions': 'js/generic/actions',
         'products': 'js/shop/products',
+        'flashMessage': 'js/flash',
     }
 });
 
@@ -128,4 +130,4 @@ window.tabler = {
     }
 };
 
-require(['core', 'actions', 'products']);
+require(['core', 'flashMessage', 'actions', 'products']);

@@ -14,7 +14,7 @@
         <div class="page">
             <div class="page-main">
                 <div class="my-3 my-md-5">
-                    <div class="alert alert-warning">{{ flash.output() }}</div>
+                    {{ partial('partials/flash-messages') }}
 
                     {% if pageTitle is defined %}
                         <div class="container">

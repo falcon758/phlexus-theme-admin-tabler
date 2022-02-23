@@ -12,7 +12,7 @@
         {{ partial('partials/nav') }}
         
         <div class="page">
-            <div class="alert alert-warning">{{ flash.output() }}</div>
+            {{ partial('partials/flash-messages') }}
 
             <div class="page-main">
                 <div class="my-3 my-md-5">
