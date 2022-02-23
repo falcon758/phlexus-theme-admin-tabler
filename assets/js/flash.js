@@ -1,7 +1,7 @@
 (function($) {
     const flashContainer = $('#flash-messages');
 
-    const messageValidator = RegExp('^[a-zA-Z0-9\\s]+$');
+    const messageValidator = RegExp('^[a-zA-Z0-9\\s\\!]+$');
 
 	let flashController = function() {
 		return {
