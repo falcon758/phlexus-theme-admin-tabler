@@ -7,12 +7,9 @@
 
         $.post(route, 'csrf=' + csrf, function(response) {
             console.log(response);
-            if(response.status === 1) {
-                $.fn.flashMessage().flashAdd(response.message, 'success');
-                row.remove();
-            } else {
-                $.fn.flashMessage().flashAdd(response.message, 'error');
-            }
+
+            let responseStatus = response.success === true ? 'success' : 'error';
+            $.fn.flashMessage().flashAdd(response.message, responseStatus);
         });
     });
 })( jQuery );
