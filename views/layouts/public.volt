@@ -12,10 +12,10 @@
         {{ partial('partials/nav-public') }}
         
         <div class="page">
+            {{ partial('partials/flash-messages') }}
+
             <div class="page-main">
                 <div class="my-3 my-md-5">
-                    {{ partial('partials/flash-messages') }}
-
                     {% if pageTitle is defined %}
                         <div class="container">
                             <div class="page-header">
