@@ -1,10 +1,17 @@
 // Action listeners
 (function($) {
     $('.item-action .delete-item').on('click', function () {
+        const messageValidator = RegExp('^[a-zA-Z0-9\\s]+$');
         const row = $(this).parents('tr');
-        const recordId = row.attr('record-id');
 
-        if (confirm('Are you sure you want do delete id: ' + recordId)) {
+        let firstColText = row.find('td:first').text().trim();
+        let message = 'Unknown';
+
+        if (firstColText.match(messageValidator) !== null) {
+            message = firstColText;
+        }
+
+        if (confirm('Are you sure you want do delete record: ' + message)) {
             const route = $(this).attr('delete-route');
             const csrf = $(this).parents('tbody').attr('csrf-token');
 
