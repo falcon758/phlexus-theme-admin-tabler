@@ -1,7 +1,8 @@
+{% set default_translation = translation.setPage() %}
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
-            {{ translation._('title-view') }}
+            {{ default_translation._('title-view') }}
         </h1>
     </div>
 
@@ -13,9 +14,10 @@
                         <thead>
                             <tr>
                                 {% for name in display %}
-                                    <th>{{ translation._('table-' ~ name) }}</th>
+                                    <th>{{ default_translation._('table-' ~ name) }}</th>
                                 {% endfor %}
-                                <th>{{ translation._('table-actions') }}</th>
+
+                                <th>{{ default_translation._('table-actions') }}</th>
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
@@ -34,11 +36,11 @@
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="{{ url(defaultRoute ~ '/edit/' ~ recordID) }}" class="dropdown-item edit-item">
-                                                    <i class="dropdown-icon fe fe-edit-2"></i> {{ translation._('link-edit') }}
+                                                    <i class="dropdown-icon fe fe-edit-2"></i> {{ default_translation._('link-edit') }}
                                                 </a>
                                                 <div class="dropdown-divider"></div>
                                                 <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ defaultRoute ~ '/delete/' ~ recordID }}">
-                                                    <i class="dropdown-icon fe fe-trash"></i> {{ translation._('link-delete') }}
+                                                    <i class="dropdown-icon fe fe-trash"></i> {{ default_translation._('link-delete') }}
                                                 </a>
                                             </div>
                                         </div>
@@ -47,7 +49,7 @@
                             {% endfor %}
                             {% if records|length == 0 %}
                                 <tr>
-                                    <td colspan="2">{{ translation._('row-no-records') }}</td>
+                                    <td colspan="2">{{ default_translation._('row-no-records') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>

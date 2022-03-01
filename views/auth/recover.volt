@@ -1,3 +1,4 @@
+{% set default_translation = translation.setPage() %}
 <div class="page-single">
     <div class="container">
         <div class="row">
@@ -5,30 +6,45 @@
                 <div class="text-center mb-6">
                     <img src="{{ assetsPath() ~ 'images/logo/phlexus.svg' }}" class="h-6" alt="">
                 </div>
+
                 {{ form('/user/auth/doRecover', 'method': 'post', 'class': 'card') }}
                     {{ form.render('csrf') }}
                     {{ form.render('hash_code') }}
 
                     <div class="card-body p-6">
-                        <div class="card-title">Password Recover</div>
+                        <div class="card-title">{{ translation._('title-password-recover') }}</div>
+
                         <div class="form-group">
-                            <label class="form-label">Password</label>
+                            <label class="form-label">
+                                {{ default_translation._('field-password') }}
+                            </label>
+
                             {{ form.render('password') }}
                         </div>
+
                         <div class="form-group">
-                            <label class="form-label">Repeat Password</label>
+                            <label class="form-label">
+                                {{ default_translation._('field-repeat-password') }}
+                            </label>
+
                             {{ form.render('repeat_password') }}
                         </div>
 
                         {{ form.render('g-recaptcha-response') }}
 
                         <div class="form-footer">
-                            <button type="submit" class="btn btn-primary btn-block">Change Password</button>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                {{ translation._('button-change-password') }}
+                            </button>
                         </div>
                     </div>
                 {{ end_form() }}
+
                 <div class="text-center text-muted">
-                    Go back to <a href="{{ url('/user/auth') }}">Login</a>
+                    {{ translation._('text-go-back-to') }}
+                    <a href="{{ url('/user/auth') }}">
+                        {{ translation._('link-login') }}
+                    </a>
                 </div>
             </div>
         </div>

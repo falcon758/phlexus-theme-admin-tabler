@@ -5,25 +5,32 @@
                 <div class="text-center mb-6">
                     <img src="{{ assetsPath() ~ 'images/logo/phlexus.svg' }}" class="h-6" alt="">
                 </div>
+
                 {{ form('/user/auth/doRemind', 'method': 'post', 'class': 'card') }}
                     {{ form.render('csrf') }}
                     
                     <div class="card-body p-6">
-                        <div class="card-title">Password Reminder</div>
+                        <div class="card-title">{{ translation._('title-password-reminder') }}</div>
                         <div class="form-group">
-                            <label class="form-label">Email address</label>
+                            <label class="form-label">{{ translation.setPage()._('field-email') }}</label>
                             {{ form.render('email') }}
                         </div>
 
                         {{ form.render('g-recaptcha-response') }}
 
                         <div class="form-footer">
-                            <button type="submit" class="btn btn-primary btn-block">Remind Me</button>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                {{ translation._('button-remind-me') }}
+                            </button>
                         </div>
                     </div>
                 {{ end_form() }}
+
                 <div class="text-center text-muted">
-                    Go back to <a href="{{ url('/user/auth') }}">Login</a>
+                    {{ translation._('text-go-back-to') }}
+                    <a href="{{ url('/user/auth') }}">
+                        {{ translation._('link-login') }}
+                    </a>
                 </div>
             </div>
         </div>
