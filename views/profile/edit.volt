@@ -3,13 +3,13 @@
 <div class="container">
     <div class="row row-cards">
         <div class="col-12">
+
             {{ form('profile/save', 'class': 'card') }}
-            
+                {{ form.render('csrf') }}
+
                 <div class="card-header">
                     <h4 class="card-title">{{ translation._('profile-edit') }}</h4>
                 </div>
-
-                {{ form.render('csrf') }}
 
                 <div class="card-body">
                     <div class="row">
@@ -47,8 +47,8 @@
                         {{ submit_button(default_translation._('button-save')) }}
                     </div>
                 </div>
-
             {{ end_form() }}
+
         </div>
     </div>
 </div>
