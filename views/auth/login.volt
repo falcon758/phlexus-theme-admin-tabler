@@ -1,4 +1,5 @@
 {% set default_translation = translation.setPage() %}
+
 <div class="page-single">
     <div class="container">
         <div class="row">
@@ -24,6 +25,7 @@
                         <div class="form-group">
                             <label class="form-label">
                                 {{ default_translation._('field-password') }}
+
                                 <a href="{{ url('/user/auth/remind') }}" class="float-right small">
                                     {{ translation._('link-forgot-passwod') }}
                                 </a>
@@ -35,6 +37,7 @@
                         <div class="form-group">
                             <label class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" />
+
                                 <span class="custom-control-label">
                                     {{ translation._('link-remember-me') }}
                                 </span>
@@ -53,6 +56,7 @@
 
                 <div class="text-center text-muted">
                     {{ translation._('text-create-account') }}
+
                     <a href="{{ url('/user/auth/create') }}">
                         {{ translation._('link-sign-up') }}
                     </a>

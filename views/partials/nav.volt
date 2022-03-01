@@ -1,4 +1,5 @@
 {% set currentPage = request.getQuery()['_url'] %}
+{% set default_translation = translation.setPage() %}
 
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
     <div class="container">
@@ -16,21 +17,27 @@
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
                         <a href="{{ url('user') }}" class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
-                            <i class="fe fe-home"></i> Home 
+                            <i class="fe fe-home"></i>
+                            {{ default_translation._('link-home') }}
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="nav-link 
                             {{ (currentPage === '/user/users' or currentPage === '/user/create') ? 'active' : '' }}" 
                             data-toggle="dropdown">
-                            <i class="fe fe-user"></i> Users
+                            <i class="fe fe-user"></i>
+                            {{ default_translation._('link-users') }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-arrow">
                             <a href="{{ url('user/users') }}" 
-                                class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">List</a>
+                                class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">
+                                {{ default_translation._('link-users-list') }
+                            </a>
                             <a href="{{ url('user/create') }}" 
-                                class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">Create</a>
+                                class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">
+                                {{ default_translation._('link-user-create') }
+                            </a>
                         </div>
                     </li>
                 </ul>

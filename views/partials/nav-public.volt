@@ -1,4 +1,5 @@
 {% set currentPage = request.getQuery()['_url'] %}
+{% set default_translation = translation.setPage() %}
 
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
     <div class="container">
@@ -16,7 +17,8 @@
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
                         <a href="{{ url('/home') }}" class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
-                            <i class="fe fe-home"></i> Home 
+                            <i class="fe fe-home"></i>
+                            {{ default_translation._('link-home') }}
                         </a>
                     </li>
                 </ul>

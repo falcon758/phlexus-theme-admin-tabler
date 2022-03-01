@@ -1,3 +1,5 @@
+{% set default_translation = translation.setPage() %}
+
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
@@ -12,9 +14,9 @@
                     <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
                         <thead>
                             <tr>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Actions</th>
+                                <th>{{ translation._('table-product') }}</th>
+                                <th>{{ translation._('table-quantity') }}</th>
+                                <th>{{ default_translation._('table-action') }}</th>
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
@@ -22,7 +24,9 @@
                                 {% set productID = product['id'] %}
                                 <tr record-id="{{ productID }}">
                                     <td>
-                                        <div>{{ product['name'] }}</div>
+                                        <div>
+                                            {{ translation._('product-' ~ product['id']) }}
+                                        </div>
                                     </td>
                                     <td>
                                         <div>{{ product['quantity'] }}</div>
@@ -34,7 +38,8 @@
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ '/cart/delete/' ~ productID }}">
-                                                    <i class="dropdown-icon fe fe-trash"></i> Delete
+                                                    <i class="dropdown-icon fe fe-trash"></i>
+                                                    {{ default_translation._('link-delete') }}
                                                 </a>
                                             </div>
                                         </div>
@@ -43,14 +48,16 @@
                             {% endfor %}
                             {% if products|length == 0 %}
                                 <tr>
-                                    <td colspan="3">No products found</td>
+                                    <td colspan="3">{{ translation._('text-no-products') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>
                     </table>
                 </div>
                 {% if products|length > 0 %}
-                    <a class="btn btn-outline-primary product-buy" href="{{ checkoutRoute }}">Checkout</a>
+                    <a class="btn btn-outline-primary product-buy" href="{{ checkoutRoute }}">
+                        {{ translation._('link-checkout') }}
+                    </a>
                 {% endif %}
             </div>
         </div>

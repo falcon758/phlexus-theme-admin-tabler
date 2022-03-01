@@ -1,1 +1,1 @@
-This is your reset url: {{ url }}
+{{ translation._('email-reminder') }} {{ url }}

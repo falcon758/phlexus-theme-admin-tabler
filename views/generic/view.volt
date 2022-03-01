@@ -1,4 +1,5 @@
 {% set default_translation = translation.setPage() %}
+
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
@@ -20,9 +21,11 @@
                                 <th>{{ default_translation._('table-actions') }}</th>
                             </tr>
                         </thead>
+
                         <tbody csrf-token="{{ csrfToken }}">
                             {% for record in records %}
                                 {% set recordID = record['id'] %}
+
                                 <tr record-id="{{ recordID }}">
                                     {% for name in display %}
                                     <td>
@@ -47,9 +50,10 @@
                                     </td>
                                 </tr>
                             {% endfor %}
+
                             {% if records|length == 0 %}
                                 <tr>
-                                    <td colspan="2">{{ default_translation._('row-no-records') }}</td>
+                                    <td colspan="2">{{ default_translation._('text-no-records') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>

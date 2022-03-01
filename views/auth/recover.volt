@@ -1,4 +1,5 @@
 {% set default_translation = translation.setPage() %}
+
 <div class="page-single">
     <div class="container">
         <div class="row">

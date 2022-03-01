@@ -1,1 +1,1 @@
-This is your activate url: {{ url }}
+{{ translation._('email-activation') }} {{ url }}

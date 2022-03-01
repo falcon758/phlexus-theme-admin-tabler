@@ -1,4 +1,5 @@
 {% set default_translation = translation.setPage() %}
+
 <div class="page-single">
     <div class="container">
         <div class="row">
@@ -39,7 +40,10 @@
                 {{ end_form() }}
 
                 <div class="text-center text-muted">
-                    Go back to <a href="{{ url('/user/auth') }}">Login</a>
+                    {{ translation._('text-go-back-to') }}
+                    <a href="{{ url('/user/auth') }}">
+                        {{ translation._('link-login') }}
+                    </a>
                 </div>
             </div>
         </div>
