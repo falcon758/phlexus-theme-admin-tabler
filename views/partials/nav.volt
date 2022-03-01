@@ -32,11 +32,11 @@
                         <div class="dropdown-menu dropdown-menu-arrow">
                             <a href="{{ url('user/users') }}" 
                                 class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">
-                                {{ default_translation._('link-users-list') }
+                                {{ default_translation._('link-users-list') }}
                             </a>
                             <a href="{{ url('user/create') }}" 
                                 class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">
-                                {{ default_translation._('link-user-create') }
+                                {{ default_translation._('link-user-create') }}
                             </a>
                         </div>
                     </li>
