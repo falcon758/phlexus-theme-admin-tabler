@@ -4,7 +4,7 @@
     <div class="row row-cards">
         <div class="col-12">
 
-            {{ form('profile/save', 'class': 'card') }}
+            {{ form('profile/save', 'class': 'card', 'enctype' : 'multipart/form-data') }}
                 {{ form.render('csrf') }}
 
                 <div class="card-header">
@@ -34,6 +34,14 @@
                                 <label class="form-label" for="repeat-password">{{ default_translation._('field-repeat-password') }}</label>
                                 
                                 {{ form.render('repeat_password', ['class': 'form-control']) }}
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12">
+                            <div class="form-field">
+                                <label class="form-label" for="profile-image">{{ default_translation._('field-profile-image') }}</label>
+                                
+                                {{ form.render('profile_image', ['class': 'form-control']) }}
                             </div>
                         </div>
                     </div>
