@@ -38,8 +38,8 @@
                         <span class="avatar" style="background-image: url({{ publicUserThemePath }}demo/faces/male/9.jpg)"></span>
 
                         <span class="ml-2 d-none d-lg-block">
-                            <span class="text-default">Name Surname</span>
-                            <small class="text-muted d-block mt-1">Administrator</small>
+                            <span class="text-default">{{ user.email }}</span>
+                            <small class="text-muted d-block mt-1">{{ user.userType }}</small>
                         </span>
                     </a>
 
