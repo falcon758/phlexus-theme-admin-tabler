@@ -35,7 +35,7 @@
 
                 <div class="dropdown">
                     <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                        <span class="avatar" style="background-image: url({{ publicUserThemePath }}demo/faces/male/9.jpg)"></span>
+                        <span class="avatar" style="background-image: url(/assets/1/1/{{ user.image }})"></span>
 
                         <span class="ml-2 d-none d-lg-block">
                             <span class="text-default">{{ user.email }}</span>
