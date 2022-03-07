@@ -4,5 +4,5 @@
     "license": "BSD-3-Clause",
     "require": {
         "falcon758/phlexus-library-translations": "dev-master"
-    },
+    }
 }
