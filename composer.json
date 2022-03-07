@@ -1,5 +1,8 @@
 {
     "name": "falcon758/phlexus-theme-admin-tabler",
     "description": "Phlexus Base Admin Theme",
-    "license": "BSD-3-Clause"
+    "license": "BSD-3-Clause",
+    "require": {
+        "falcon758/phlexus-library-translations": "dev-master"
+    },
 }
