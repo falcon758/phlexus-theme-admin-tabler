@@ -16,6 +16,7 @@
                             <tr>
                                 <th>{{ translation._('table-product') }}</th>
                                 <th>{{ translation._('table-quantity') }}</th>
+                                <th>{{ translation._('table-price') }}</th>
                                 <th>{{ default_translation._('table-action') }}</th>
                             </tr>
                         </thead>
@@ -30,6 +31,9 @@
                                     </td>
                                     <td>
                                         <div>{{ product['quantity'] }}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{ product['price'] }} &euro;</div>
                                     </td>
                                     <td>
                                         <div class="item-action dropdown">
