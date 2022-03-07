@@ -4,7 +4,7 @@
     <div class="row row-cards">
         <div class="col-12">
 
-            {{ form(saveRoute, 'class': 'card') }}
+            {{ form(saveRoute, 'class': 'card', 'enctype' : 'multipart/form-data') }}
                 <div class="card-header">
                     <h4 class="card-title">{{ default_translation._('title-edit') }}</h4>
                 </div>

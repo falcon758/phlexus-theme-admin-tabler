@@ -21,6 +21,7 @@
                             {{ default_translation._('link-home') }}
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a href="javascript:void(0)" class="nav-link 
                             {{ (currentPage === '/user/users' or currentPage === '/user/create') ? 'active' : '' }}" 
@@ -37,6 +38,26 @@
                             <a href="{{ url('user/create') }}" 
                                 class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">
                                 {{ default_translation._('link-user-create') }}
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link 
+                            {{ (currentPage === '/shop/product' or currentPage === '/shop/product/create') ? 'active' : '' }}" 
+                            data-toggle="dropdown">
+                            <i class="fe fe-user"></i>
+                            {{ default_translation._('link-products') }}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-arrow">
+                            <a href="{{ url('shop/product') }}" 
+                                class="dropdown-item {{ currentPage === '/shop/product' ? 'active' : '' }}">
+                                {{ default_translation._('link-product-list') }}
+                            </a>
+                            <a href="{{ url('shop/product/create') }}" 
+                                class="dropdown-item {{ currentPage === '/shop/product/create' ? 'active' : '' }}">
+                                {{ default_translation._('link-product-create') }}
                             </a>
                         </div>
                     </li>
