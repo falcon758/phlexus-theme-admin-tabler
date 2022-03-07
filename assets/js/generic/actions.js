@@ -1,7 +1,7 @@
 // Action listeners
 (function($) {
     $('.item-action .delete-item').on('click', function () {
-        const messageValidator = RegExp('^[a-zA-Z0-9\\s]+$');
+        const messageValidator = RegExp('^[a-zA-Z0-9\-\\s]+$');
         const row = $(this).parents('tr');
 
         let firstColText = row.find('td:first').text().trim();
