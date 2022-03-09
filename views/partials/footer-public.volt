@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-6 col-md-3">
                         <ul class="list-unstyled mb-0">
-                            <li><a href="{{ url('/home') }}">{{ default_translation._('link-home') }}</a></li>
+                            <li><a href="{{ url('/') }}">{{ default_translation._('link-home') }}</a></li>
                             <li><a href="{{ url('/cart') }}">{{ default_translation._('link-cart') }}</a></li>
                         </ul>
                     </div>
