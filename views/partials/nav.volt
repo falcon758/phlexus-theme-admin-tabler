@@ -22,45 +22,49 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link 
-                            {{ (currentPage === '/user/users' or currentPage === '/user/create') ? 'active' : '' }}" 
-                            data-toggle="dropdown">
-                            <i class="fe fe-user"></i>
-                            {{ default_translation._('link-users') }}
-                        </a>
+                    {% if acl.hasPermission('baseuser', 'user', 'view') %}
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link 
+                                {{ (currentPage === '/user/users' or currentPage === '/user/create') ? 'active' : '' }}" 
+                                data-toggle="dropdown">
+                                <i class="fe fe-user"></i>
+                                {{ default_translation._('link-users') }}
+                            </a>
 
-                        <div class="dropdown-menu dropdown-menu-arrow">
-                            <a href="{{ url('user/users') }}" 
-                                class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">
-                                {{ default_translation._('link-users-list') }}
-                            </a>
-                            <a href="{{ url('user/create') }}" 
-                                class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">
-                                {{ default_translation._('link-user-create') }}
-                            </a>
-                        </div>
-                    </li>
+                            <div class="dropdown-menu dropdown-menu-arrow">
+                                <a href="{{ url('user/users') }}" 
+                                    class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">
+                                    {{ default_translation._('link-users-list') }}
+                                </a>
+                                <a href="{{ url('user/create') }}" 
+                                    class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">
+                                    {{ default_translation._('link-user-create') }}
+                                </a>
+                            </div>
+                        </li>
+                    {% endif %}
 
-                    <li class="nav-item">
-                        <a href="javascript:void(0)" class="nav-link 
-                            {{ (currentPage === '/shop/product' or currentPage === '/shop/product/create') ? 'active' : '' }}" 
-                            data-toggle="dropdown">
-                            <i class="fe fe-user"></i>
-                            {{ default_translation._('link-products') }}
-                        </a>
+                    {% if acl.hasPermission('shop', 'product', 'view') %}
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link 
+                                {{ (currentPage === '/shop/product' or currentPage === '/shop/product/create') ? 'active' : '' }}" 
+                                data-toggle="dropdown">
+                                <i class="fe fe-user"></i>
+                                {{ default_translation._('link-products') }}
+                            </a>
 
-                        <div class="dropdown-menu dropdown-menu-arrow">
-                            <a href="{{ url('shop/product') }}" 
-                                class="dropdown-item {{ currentPage === '/shop/product' ? 'active' : '' }}">
-                                {{ default_translation._('link-product-list') }}
-                            </a>
-                            <a href="{{ url('shop/product/create') }}" 
-                                class="dropdown-item {{ currentPage === '/shop/product/create' ? 'active' : '' }}">
-                                {{ default_translation._('link-product-create') }}
-                            </a>
-                        </div>
-                    </li>
+                            <div class="dropdown-menu dropdown-menu-arrow">
+                                <a href="{{ url('shop/product') }}" 
+                                    class="dropdown-item {{ currentPage === '/shop/product' ? 'active' : '' }}">
+                                    {{ default_translation._('link-product-list') }}
+                                </a>
+                                <a href="{{ url('shop/product/create') }}" 
+                                    class="dropdown-item {{ currentPage === '/shop/product/create' ? 'active' : '' }}">
+                                    {{ default_translation._('link-product-create') }}
+                                </a>
+                            </div>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
