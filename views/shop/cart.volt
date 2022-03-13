@@ -1,3 +1,4 @@
+{% set page_translation = translation.getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
 <div class="container">
@@ -14,9 +15,9 @@
                     <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
                         <thead>
                             <tr>
-                                <th>{{ translation._('table-product') }}</th>
-                                <th>{{ translation._('table-quantity') }}</th>
-                                <th>{{ translation._('table-price') }}</th>
+                                <th>{{ page_translation._('table-product') }}</th>
+                                <th>{{ page_translation._('table-quantity') }}</th>
+                                <th>{{ page_translation._('table-price') }}</th>
                                 <th>{{ default_translation._('table-action') }}</th>
                             </tr>
                         </thead>
@@ -26,7 +27,7 @@
                                 <tr record-id="{{ productID }}">
                                     <td>
                                         <div>
-                                            {{ translation._('product-' ~ product['id']) }}
+                                            {{ page_translation._('product-' ~ product['id']) }}
                                         </div>
                                     </td>
                                     <td>
@@ -52,7 +53,7 @@
                             {% endfor %}
                             {% if products|length == 0 %}
                                 <tr>
-                                    <td colspan="3">{{ translation._('text-no-products') }}</td>
+                                    <td colspan="3">{{ page_translation._('text-no-products') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>
@@ -60,7 +61,7 @@
                 </div>
                 {% if products|length > 0 %}
                     <a class="btn btn-outline-primary product-buy" href="{{ checkoutRoute }}">
-                        {{ translation._('link-checkout') }}
+                        {{ page_translation._('link-checkout') }}
                     </a>
                 {% endif %}
             </div>

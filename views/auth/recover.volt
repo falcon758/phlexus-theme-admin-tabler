@@ -1,3 +1,4 @@
+{% set page_translation = translation.getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
 <div class="page-single">
@@ -13,7 +14,7 @@
                     {{ form.render('hash_code') }}
 
                     <div class="card-body p-6">
-                        <div class="card-title">{{ translation._('title-password-recover') }}</div>
+                        <div class="card-title">{{ page_translation._('title-password-recover') }}</div>
 
                         <div class="form-group">
                             <label class="form-label">
@@ -35,16 +36,16 @@
 
                         <div class="form-footer">
                             <button type="submit" class="btn btn-primary btn-block">
-                                {{ translation._('button-change-password') }}
+                                {{ page_translation._('button-change-password') }}
                             </button>
                         </div>
                     </div>
                 {{ end_form() }}
 
                 <div class="text-center text-muted">
-                    {{ translation._('text-go-back-to') }}
+                    {{ page_translation._('text-go-back-to') }}
                     <a href="{{ url('/user/auth') }}">
-                        {{ translation._('link-login') }}
+                        {{ page_translation._('link-login') }}
                     </a>
                 </div>
             </div>

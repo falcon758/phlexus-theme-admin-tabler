@@ -1,3 +1,4 @@
+{% set page_translation = translation.getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
 <div class="container">
@@ -8,7 +9,7 @@
                 {{ form.render('csrf') }}
 
                 <div class="card-header">
-                    <h4 class="card-title">{{ translation._('profile-edit') }}</h4>
+                    <h4 class="card-title">{{ page_translation._('profile-edit') }}</h4>
                 </div>
 
                 <div class="card-body">

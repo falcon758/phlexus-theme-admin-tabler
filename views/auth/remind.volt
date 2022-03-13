@@ -1,3 +1,6 @@
+{% set page_translation = translation.getTranslator() %}
+{% set default_translation = translation.setPage() %}
+
 <div class="page-single">
     <div class="container">
         <div class="row">
@@ -10,7 +13,7 @@
                     {{ form.render('csrf') }}
                     
                     <div class="card-body p-6">
-                        <div class="card-title">{{ translation._('title-password-reminder') }}</div>
+                        <div class="card-title">{{ page_translation._('title-password-reminder') }}</div>
                         <div class="form-group">
                             <label class="form-label">{{ translation.setPage()._('field-email') }}</label>
                             {{ form.render('email') }}
@@ -20,16 +23,16 @@
 
                         <div class="form-footer">
                             <button type="submit" class="btn btn-primary btn-block">
-                                {{ translation._('button-remind-me') }}
+                                {{ page_translation._('button-remind-me') }}
                             </button>
                         </div>
                     </div>
                 {{ end_form() }}
 
                 <div class="text-center text-muted">
-                    {{ translation._('text-go-back-to') }}
+                    {{ page_translation._('text-go-back-to') }}
                     <a href="{{ url('/user/auth') }}">
-                        {{ translation._('link-login') }}
+                        {{ page_translation._('link-login') }}
                     </a>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+{% set page_translation = translation.getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
 <div class="page-single">
@@ -12,7 +13,7 @@
                     {{ form.render('csrf') }}
 
                     <div class="card-body p-6">
-                        <div class="card-title">{{ translation._('title-login') }}</div>
+                        <div class="card-title">{{ page_translation._('title-login') }}</div>
 
                         <div class="form-group">
                             <label class="form-label">
@@ -27,7 +28,7 @@
                                 {{ default_translation._('field-password') }}
 
                                 <a href="{{ url('/user/auth/remind') }}" class="float-right small">
-                                    {{ translation._('link-forgot-password') }}
+                                    {{ page_translation._('link-forgot-password') }}
                                 </a>
                             </label>
 
@@ -39,7 +40,7 @@
                                 <input type="checkbox" class="custom-control-input" />
 
                                 <span class="custom-control-label">
-                                    {{ translation._('link-remember-me') }}
+                                    {{ page_translation._('link-remember-me') }}
                                 </span>
                             </label>
                         </div>
@@ -48,17 +49,17 @@
                         
                         <div class="form-footer">
                             <button type="submit" class="btn btn-primary btn-block">
-                                {{ translation._('button-sign-in') }}
+                                {{ page_translation._('button-sign-in') }}
                             </button>
                         </div>
                     </div>
                 {{ end_form() }}
 
                 <div class="text-center text-muted">
-                    {{ translation._('text-create-account') }}
+                    {{ page_translation._('text-create-account') }}
 
                     <a href="{{ url('/user/auth/create') }}">
-                        {{ translation._('link-sign-up') }}
+                        {{ page_translation._('link-sign-up') }}
                     </a>
                 </div>
             </div>
