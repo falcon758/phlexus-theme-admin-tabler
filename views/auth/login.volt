@@ -27,7 +27,7 @@
                                 {{ default_translation._('field-password') }}
 
                                 <a href="{{ url('/user/auth/remind') }}" class="float-right small">
-                                    {{ translation._('link-forgot-passwod') }}
+                                    {{ translation._('link-forgot-password') }}
                                 </a>
                             </label>
 
