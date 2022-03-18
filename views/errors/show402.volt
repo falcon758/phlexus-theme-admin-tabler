@@ -1,5 +1,7 @@
 {% extends 'layouts/base.volt' %}
 
+{{ translation.setType() }}
+
 {% block content %}
 <div class="page-content">
     <div class="container text-center">

@@ -1,1 +1,1 @@
-<h2>{{ translation._('text-content') }}</h2>
+<h2>{{ translation.setType()._('text-content') }}</h2>

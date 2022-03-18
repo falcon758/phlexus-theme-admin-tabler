@@ -1,4 +1,4 @@
-{% set default_translation = translation.setPage() %}
+{% set default_translation = translation.setPageType() %}
 
 <div class="header py-4">
     <div class="container">

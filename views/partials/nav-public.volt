@@ -1,4 +1,4 @@
-{% set default_translation = translation.setPage() %}
+{% set default_translation = translation.setPageType() %}
 
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
     <div class="container">

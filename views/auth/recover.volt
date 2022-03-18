@@ -1,4 +1,4 @@
-{% set page_translation = translation.getTranslator() %}
+{% set page_translation = translation.setType().getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
 <div class="page-single">

@@ -1,1 +1,1 @@
-{{ translation._('email-reminder') }} {{ url }}
+{{ translation.setType('email')._('email-reminder') }} {{ url }}

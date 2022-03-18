@@ -1,1 +1,1 @@
-{{ translation._('email-activation') }} {{ url }}
+{{ translation.setType('email')._('email-activation') }} {{ url }}
