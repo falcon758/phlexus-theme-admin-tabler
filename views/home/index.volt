@@ -1,1 +1,1 @@
-<h2>{{ translation.setType()._('text-content') }}</h2>
+<h2>{{ translation.setTypePage()._('text-content') }}</h2>

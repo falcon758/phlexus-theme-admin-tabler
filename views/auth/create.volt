@@ -1,4 +1,4 @@
-{% set page_translation = translation.setType().getTranslator() %}
+{% set page_translation = translation.setTypePage().getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
 <div class="page-single">
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">{{ default_translation._('field-repeate-password') }}</label>
+                            <label class="form-label">{{ default_translation._('field-repeat-password') }}</label>
                             {{ form.render('repeat_password') }}
                         </div>
 

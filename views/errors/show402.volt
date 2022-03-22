@@ -1,6 +1,6 @@
 {% extends 'layouts/base.volt' %}
 
-{{ translation.setType() }}
+{% set translation = translation.setTypePage() %}
 
 {% block content %}
 <div class="page-content">

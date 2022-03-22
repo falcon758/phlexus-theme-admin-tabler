@@ -1,4 +1,4 @@
-{{ translation.setType() }}
+{% set translation = translation.setTypePage() %}
 
 <div class="container">
     <div class="page-header">

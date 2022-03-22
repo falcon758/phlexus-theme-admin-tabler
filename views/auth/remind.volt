@@ -1,4 +1,4 @@
-{% set page_translation = translation.setType().getTranslator() %}
+{% set page_translation = translation.setTypePage().getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
 <div class="page-single">
@@ -15,7 +15,7 @@
                     <div class="card-body p-6">
                         <div class="card-title">{{ page_translation._('title-password-reminder') }}</div>
                         <div class="form-group">
-                            <label class="form-label">{{ translation.setPage()._('field-email') }}</label>
+                            <label class="form-label">{{ translation.setPage()._('field-email-address') }}</label>
                             {{ form.render('email') }}
                         </div>
 

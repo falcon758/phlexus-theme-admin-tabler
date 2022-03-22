@@ -1,4 +1,4 @@
-{% set page_translation = translation.setType().getTranslator() %}
+{% set page_translation = translation.setTypePage().getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
 <div class="container">
