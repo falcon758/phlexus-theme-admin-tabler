@@ -24,6 +24,14 @@
 
                         <div class="col-xl-12">
                             <div class="form-field">
+                                <label class="form-label" for="field-old-password">{{ default_translation._('field-old-password') }}</label>
+                                
+                                {{ form.render('old_password', ['class': 'form-control']) }}
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12">
+                            <div class="form-field">
                                 <label class="form-label" for="field-password">{{ default_translation._('field-password') }}</label>
                                 
                                 {{ form.render('password', ['class': 'form-control']) }}
