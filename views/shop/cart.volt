@@ -27,7 +27,7 @@
                                 <tr record-id="{{ productID }}">
                                     <td>
                                         <div>
-                                            {{ page_translation._('product-' ~ product['id']) }}
+                                            {{ default_translation._('product-' ~ product['id']) }}
                                         </div>
                                     </td>
                                     <td>

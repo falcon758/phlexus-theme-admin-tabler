@@ -1,3 +1,4 @@
+{% set page_translation = translation.setTypePage().getTranslator() %}
 {% set default_translation = translation.setPageType() %}
 
 <div class="container">
@@ -15,7 +16,7 @@
                     {{ checkoutForm.render('csrf') }}
 
                     <div class="card-header">
-                        <h3 class="card-title">{{ translation._('title-address') }}</h3>
+                        <h3 class="card-title">{{ page_translation._('title-address') }}</h3>
                     </div>
 
                     <div class="table-responsive">
@@ -40,7 +41,7 @@
 
                     <div class="card-header">
                         <h3 class="card-title">
-                            {{ translation._('title-payment-and-shipping') }}
+                            {{ page_translation._('title-payment-and-shipping') }}
                         </h3>
                     </div>
                     <div class="table-responsive">
@@ -61,7 +62,7 @@
                 </div>
 
                 <button class="btn btn-outline-primary product-buy" type="submit">
-                    {{ translation._('button-order') }}
+                    {{ page_translation._('button-order') }}
                 </button>
             {{ end_form() }}
         </div>
@@ -76,7 +77,7 @@
                                 <tr>
                                     <td>
                                         <div>
-                                            {{ translation._('product-' ~ product['id']) }}
+                                            {{ default_translation._('product-' ~ product['id']) }}
                                         </div>
                                     </td>
                                     <td>
@@ -87,7 +88,7 @@
 
                             <tr>
                                 <td colspan="2">
-                                    <div>{{ translation._('text-total-price') }}: {{ total }}</div>
+                                    <div>{{ page_translation._('text-total-price') }}: {{ total }}</div>
                                 </td>
                             </tr>
                         </tbody>
