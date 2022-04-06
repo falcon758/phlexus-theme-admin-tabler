@@ -12,9 +12,7 @@
 
                 {{ partial('partials/nav-cart') }}
 
-                {% if acl.hasPermission('baseuser', 'profile', 'edit') %}
-                    {{ partial('partials/nav-user') }}
-                {% endif %}
+                {{ partial('partials/nav-user') }}
             </div>
 
             <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
