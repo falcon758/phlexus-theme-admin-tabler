@@ -16,7 +16,8 @@
             <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="{{ url('user') }}" class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
+                        <a href="{{ url('user') }}" 
+                           class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
                             <i class="fe fe-home"></i>
                             {{ default_translation._('link-home') }}
                         </a>
@@ -24,20 +25,20 @@
 
                     {% if acl.hasPermission('baseuser', 'user', 'view') %}
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link 
-                                {{ (currentPage === '/user/users' or currentPage === '/user/create') ? 'active' : '' }}" 
-                                data-toggle="dropdown">
+                            <a href="javascript:void(0)" 
+                               class="nav-link {{ (currentPage === '/user/users' or currentPage === '/user/create') ? 'active' : '' }}" 
+                               data-toggle="dropdown">
                                 <i class="fe fe-user"></i>
                                 {{ default_translation._('link-users') }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-arrow">
                                 <a href="{{ url('user/users') }}" 
-                                    class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">
+                                   class="dropdown-item {{ currentPage === '/user/users' ? 'active' : '' }}">
                                     {{ default_translation._('link-users-list') }}
                                 </a>
                                 <a href="{{ url('user/create') }}" 
-                                    class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">
+                                   class="dropdown-item {{ currentPage === '/user/create' ? 'active' : '' }}">
                                     {{ default_translation._('link-user-create') }}
                                 </a>
                             </div>
@@ -46,20 +47,20 @@
 
                     {% if acl.hasPermission('shop', 'product', 'view') %}
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link 
-                                {{ (currentPage === '/shop/product' or currentPage === '/shop/product/create') ? 'active' : '' }}" 
-                                data-toggle="dropdown">
+                            <a href="javascript:void(0)" 
+                               class="nav-link {{ (currentPage === '/shop/product' or currentPage === '/shop/product/create') ? 'active' : '' }}" 
+                               data-toggle="dropdown">
                                 <i class="fe fe-user"></i>
                                 {{ default_translation._('link-products') }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-arrow">
                                 <a href="{{ url('shop/product') }}" 
-                                    class="dropdown-item {{ currentPage === '/shop/product' ? 'active' : '' }}">
+                                   class="dropdown-item {{ currentPage === '/shop/product' ? 'active' : '' }}">
                                     {{ default_translation._('link-product-list') }}
                                 </a>
                                 <a href="{{ url('shop/product/create') }}" 
-                                    class="dropdown-item {{ currentPage === '/shop/product/create' ? 'active' : '' }}">
+                                   class="dropdown-item {{ currentPage === '/shop/product/create' ? 'active' : '' }}">
                                     {{ default_translation._('link-product-create') }}
                                 </a>
                             </div>

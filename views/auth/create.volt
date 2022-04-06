@@ -30,6 +30,11 @@
                             {{ form.render('repeat_password') }}
                         </div>
 
+                        <div class="form-group">
+                            {{ form.render('accept_terms') }}
+                            {{ default_translation._('field-accept-terms') }}                            
+                        </div>
+
                         {{ form.render('g-recaptcha-response') }}
 
                         <div class="form-footer">
