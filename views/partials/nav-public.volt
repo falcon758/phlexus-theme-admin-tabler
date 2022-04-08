@@ -23,6 +23,16 @@
                         </a>
                     </li>
 
+                    {% if acl.hasPermission('baseuser', 'user', 'index') %}
+                        <li class="nav-item">
+                            <a href="{{ url('/user') }}" class="nav-link 
+                                {{ currentPage === '/user' ? 'active' : '' }}">
+                                <i class="fe fe-book"></i>
+                                {{ default_translation._('link-dashboard') }}
+                            </a>
+                        </li>
+                    {% endif %}
+
                     <li class="nav-item">
                         <a href="{{ url('/products') }}" class="nav-link 
                             {{ currentPage === '/products' ? 'active' : '' }}">

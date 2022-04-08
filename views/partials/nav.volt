@@ -16,10 +16,18 @@
             <div class="col-lg order-lg-first">
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
-                        <a href="{{ url('user') }}" 
-                           class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
+                        <a href="{{ url('/') }}" 
+                           class="nav-link {{ currentPage === '/' ? 'active' : '' }}">
                             <i class="fe fe-home"></i>
                             {{ default_translation._('link-home') }}
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ url('/user') }}" 
+                           class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
+                            <i class="fe fe-book"></i>
+                            {{ default_translation._('link-dashboard') }}
                         </a>
                     </li>
 
