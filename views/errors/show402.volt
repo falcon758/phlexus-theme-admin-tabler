@@ -1,5 +1,3 @@
-{% extends 'layouts/base.volt' %}
-
 {% set translation = translation.setTypePage() %}
 
 {% block content %}
