@@ -3,7 +3,9 @@
 {% if acl.hasPermission('baseuser', 'profile', 'edit') %}
     <div class="dropdown">
         <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-            <span class="avatar" style="background-image: url(/assets/1/2/{{ user.userDir }}/{{ user.image }})"></span>
+            {% if user.image is defined and user.image != "" %}
+                <span class="avatar" style="background-image: url(/assets/1/2/{{ user.userDir }}/{{ user.image }})"></span>
+            {% endif %}
 
             <span class="ml-2 d-none d-lg-block">
                 <span class="text-default">{{ user.email }}</span>
