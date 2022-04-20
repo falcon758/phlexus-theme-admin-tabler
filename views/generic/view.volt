@@ -45,6 +45,13 @@
                                                 <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ defaultRoute ~ '/delete/' ~ recordID }}">
                                                     <i class="dropdown-icon fe fe-trash"></i> {{ default_translation._('link-delete') }}
                                                 </a>
+
+                                                {% for relatedName, relatedUrl in relatedViews %}
+                                                    <div class="dropdown-divider"></div>
+                                                    <a href="{{ relatedUrl ~ '/?related=' ~ recordID }}" class="dropdown-item edit-item">
+                                                        <i class="dropdown-icon fe fe-link"></i> {{ default_translation._(relatedName) }}
+                                                    </a>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </td>

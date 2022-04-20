@@ -1,4 +1,4 @@
-{% set currentPage = request.getQuery()['_url'] %}
+{% set currentPage = ((request.getQuery()['_url'] is defined) ? request.getQuery()['_url'] : '/') %}
 {% set default_translation = translation.setPageType() %}
 
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
@@ -17,7 +17,7 @@
                 <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
                     <li class="nav-item">
                         <a href="{{ url('/') }}" class="nav-link 
-                            {{ currentPage === null ? 'active' : '' }}">
+                            {{ currentPage === '/' ? 'active' : '' }}">
                             <i class="fe fe-home"></i>
                             {{ default_translation._('link-home') }}
                         </a>

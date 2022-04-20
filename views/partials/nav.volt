@@ -1,4 +1,4 @@
-{% set currentPage = request.getQuery()['_url'] %}
+{% set currentPage = ((request.getQuery()['_url'] is defined) ? request.getQuery()['_url'] : '/') %}
 {% set default_translation = translation.setPageType() %}
 
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">

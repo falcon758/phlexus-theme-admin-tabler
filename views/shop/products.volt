@@ -21,9 +21,11 @@
                     </div>
 
                     <div class="card-body p-3 text-center">
-                        <div class="h3 mt-auto">
-                            <img src="/assets/1/1/f86d580d78446c12ad46c98742f89ea6/{{ product.media.mediaName }}" />
-                        </div>
+                        {% if product.media.mediaName is defined %}
+                            <div class="h3 mt-auto">
+                                <img src="/assets/1/1/f86d580d78446c12ad46c98742f89ea6/{{ product.media.mediaName }}" />
+                            </div>
+                        {% endif %}
 
                         <div class="h4 mt-auto">
                             {{ product.price }} &euro;
