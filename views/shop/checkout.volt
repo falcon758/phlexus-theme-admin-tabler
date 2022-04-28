@@ -4,7 +4,7 @@
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
-            Cart
+            {{ page_translation._('title-checkout') }}
         </h1>
     </div>
 

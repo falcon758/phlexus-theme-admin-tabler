@@ -4,7 +4,7 @@
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
-            {{ page_translation._('title-cart') }}
+            {{ page_translation._('title-payments') }}
         </h1>
     </div>
 
@@ -18,23 +18,27 @@
                                 <th>{{ page_translation._('table-product') }}</th>
                                 <th>{{ page_translation._('table-quantity') }}</th>
                                 <th>{{ page_translation._('table-price') }}</th>
+                                <th>{{ page_translation._('table-due-date') }}</th>
                                 <th>{{ default_translation._('table-action') }}</th>
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
-                            {% for product in products %}
-                                {% set productID = product['id'] %}
-                                <tr record-id="{{ productID }}">
+                            {% for payment in payments %}
+                                {% set paymentID = payment.id %}
+                                <tr record-id="{{ paymentID }}">
                                     <td>
                                         <div>
-                                            {{ default_translation._('product-' ~ product['id']) }}
+                                            {{ default_translation._('product-' ~ payment.id) }}
                                         </div>
                                     </td>
                                     <td>
-                                        <div>{{ product['quantity'] }}</div>
+                                        <div></div>
                                     </td>
                                     <td>
-                                        <div>{{ product['price'] }} &euro;</div>
+                                        <div></div>
+                                    </td>
+                                    <td>
+                                        <div></div>
                                     </td>
                                     <td>
                                         <div class="item-action dropdown">
@@ -42,28 +46,23 @@
                                                 <i class="fe fe-more-vertical"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ '/cart/delete/' ~ productID }}">
+                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ '/payment/pay/' ~ paymentID }}">
                                                     <i class="dropdown-icon fe fe-trash"></i>
-                                                    {{ default_translation._('link-delete') }}
+                                                    {{ page_translation._('link-pay') }}
                                                 </a>
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                             {% endfor %}
-                            {% if products|length == 0 %}
+                            {% if payments|length == 0 %}
                                 <tr>
-                                    <td colspan="3">{{ page_translation._('text-no-products') }}</td>
+                                    <td colspan="5">{{ page_translation._('text-no-payments') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>
                     </table>
                 </div>
-                {% if products|length > 0 %}
-                    <a class="btn btn-outline-primary product-buy" href="{{ checkoutRoute }}">
-                        {{ page_translation._('link-checkout') }}
-                    </a>
-                {% endif %}
             </div>
         </div>
     </div>

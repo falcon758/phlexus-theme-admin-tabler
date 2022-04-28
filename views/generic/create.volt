@@ -3,11 +3,11 @@
 <div class="container">
     <div class="row row-cards">
         <div class="col-12">
+            <div class="card-header">
+                <h4 class="card-title">{{ default_translation._('title-create') }}</h4>
+            </div>
 
             {{ form(saveRoute, 'class': 'card', 'enctype' : 'multipart/form-data') }}
-                <div class="card-header">
-                    <h4 class="card-title">{{ default_translation._('title-create') }}</h4>
-                </div>
 
                 {{ form.render('csrf') }}
 
