@@ -24,11 +24,11 @@
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
                             {% for payment in payments %}
-                                {% set paymentID = payment.id %}
+                                {% set paymentID = payment['id'] %}
                                 <tr record-id="{{ paymentID }}">
                                     <td>
                                         <div>
-                                            {{ default_translation._('product-' ~ payment.id) }}
+                                            {{ default_translation._('product-' ~ payment['id']) }}
                                         </div>
                                     </td>
                                     <td>
