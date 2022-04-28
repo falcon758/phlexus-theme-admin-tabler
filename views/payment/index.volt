@@ -18,27 +18,39 @@
                                 <th>{{ page_translation._('table-product') }}</th>
                                 <th>{{ page_translation._('table-quantity') }}</th>
                                 <th>{{ page_translation._('table-price') }}</th>
+                                <th>{{ page_translation._('table-due-days') }}</th>
                                 <th>{{ page_translation._('table-due-date') }}</th>
+                                <th>{{ page_translation._('table-cancelation-days') }}</th>
+                                <th>{{ page_translation._('table-cancelation-date') }}</th>
                                 <th>{{ default_translation._('table-action') }}</th>
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
                             {% for payment in payments %}
-                                {% set paymentID = payment['id'] %}
+                                {% set paymentID = payment['paymentID'] %}
                                 <tr record-id="{{ paymentID }}">
                                     <td>
                                         <div>
-                                            {{ default_translation._('product-' ~ payment['id']) }}
+                                            {{ default_translation._('product-' ~ payment['productID']) }}
                                         </div>
                                     </td>
                                     <td>
-                                        <div></div>
+                                        <div>{{ payment['quantity'] }}</div>
                                     </td>
                                     <td>
-                                        <div></div>
+                                        <div>{{ payment['price'] }} &euro;</div>
                                     </td>
                                     <td>
-                                        <div></div>
+                                        <div>{{ payment['due_days'] }}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{ payment['due_date'] }}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{ payment['cancelation_days'] }}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{ payment['cancelation_date'] }}</div>
                                     </td>
                                     <td>
                                         <div class="item-action dropdown">
@@ -46,8 +58,8 @@
                                                 <i class="fe fe-more-vertical"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item delete-item" delete-route="{{ '/payment/pay/' ~ paymentID }}">
-                                                    <i class="dropdown-icon fe fe-trash"></i>
+                                                <a href="javascript:void(0)" class="dropdown-item pay-item" pay-route="{{ payRoute ~ paymentID }}">
+                                                    <i class="dropdown-icon fe fe-credit-card"></i>
                                                     {{ page_translation._('link-pay') }}
                                                 </a>
                                             </div>

@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="mb-4">
-                            <btn class="btn btn-outline-primary product-buy"  buy-route="{{ saveRoute ~ productID }}">
+                            <btn class="btn btn-outline-primary product-buy" buy-route="{{ addRoute ~ productID }}">
                                 {{ page_translation._('button-buy') }}
                             </btn>
                         </div>
