@@ -30,6 +30,15 @@
                             {{ default_translation._('link-dashboard') }}
                         </a>
                     </li>
+                    {% if acl.hasPermission('shop', 'payment', 'index') %}
+                        <li class="nav-item">
+                            <a href="{{ url('/payments') }}" 
+                            class="nav-link {{ currentPage === '/payments' ? 'active' : '' }}">
+                                <i class="fe fe-book"></i>
+                                {{ default_translation._('link-payment') }}
+                            </a>
+                        </li>
+                    {% endif %}
 
                     {% if acl.hasPermission('baseuser', 'user', 'view') %}
                         <li class="nav-item">

@@ -58,7 +58,7 @@
                                                 <i class="fe fe-more-vertical"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item pay-item" pay-route="{{ payRoute ~ paymentID }}">
+                                                <a href="{{ payRoute ~ paymentID }}" class="dropdown-item pay-item" pay-route="">
                                                     <i class="dropdown-icon fe fe-credit-card"></i>
                                                     {{ page_translation._('link-pay') }}
                                                 </a>
