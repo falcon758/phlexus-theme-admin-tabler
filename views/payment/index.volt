@@ -69,7 +69,7 @@
                             {% endfor %}
                             {% if payments|length == 0 %}
                                 <tr>
-                                    <td colspan="5">{{ page_translation._('text-no-payments') }}</td>
+                                    <td colspan="8">{{ page_translation._('text-no-payments') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>

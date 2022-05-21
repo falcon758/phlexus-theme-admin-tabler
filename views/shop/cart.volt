@@ -53,7 +53,7 @@
                             {% endfor %}
                             {% if products|length == 0 %}
                                 <tr>
-                                    <td colspan="3">{{ page_translation._('text-no-products') }}</td>
+                                    <td colspan="4">{{ page_translation._('text-no-products') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>
