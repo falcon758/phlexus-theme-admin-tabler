@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-10">
+        <div class="col-10 mt-auto">
             <ul class="pagination">
             {% if page.current > 1 %}
                 <li>
@@ -39,8 +39,8 @@
         </div>
 
         {% if limit %}
-            <div class="col-2">
-                Showing {{ start }} - {{ end  }} of {{ totalItems }}
+            <div class="col-2 mt-auto">
+                {{ translator._('paginator-showing') }} {{ start }} - {{ end  }} of {{ totalItems }}
             </div>
         {% endif %}
     </div>

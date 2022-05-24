@@ -69,7 +69,8 @@
                 {{ 
                     partial('partials/pagination',   [
                         'page': paginate,
-                        'limit': paginate.getLimit()
+                        'limit': paginate.getLimit(),
+                        'translator': default_translation
                     ])
                 }}
             </div>
