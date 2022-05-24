@@ -48,7 +48,7 @@
 
                                                 {% for relatedName, relatedUrl in relatedViews %}
                                                     <div class="dropdown-divider"></div>
-                                                    <a href="{{ relatedUrl ~ '/?related=' ~ recordID }}" class="dropdown-item edit-item">
+                                                    <a href="{{ url(relatedUrl ~ '/?related=' ~ recordID) }}" class="dropdown-item edit-item">
                                                         <i class="dropdown-icon fe fe-link"></i> {{ default_translation._(relatedName) }}
                                                     </a>
                                                 {% endfor %}
