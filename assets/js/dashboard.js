@@ -1,6 +1,7 @@
 require.config({
     shim: {
         'flashMessage': ['jquery'],
+        'paginator': ['jquery'],
         'products': ['jquery'],
         'actions': ['jquery'],
         'bootstrap': ['jquery'],
@@ -25,6 +26,7 @@ require.config({
         'actions': 'js/generic/actions',
         'products': 'js/shop/products',
         'flashMessage': 'js/flash',
+        'paginator': 'js/paginator',
     }
 });
 
@@ -130,4 +132,4 @@ window.tabler = {
     }
 };
 
-require(['core', 'flashMessage', 'actions', 'products']);
+require(['core', 'flashMessage', 'paginator', 'actions', 'products']);
