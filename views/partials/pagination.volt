@@ -28,6 +28,7 @@
             {% endif %}
             </ul>
         </div>
+
         {% if limit %}
             <div class="col-2">
                 Showing {{ start }} - {{ end  }} of {{ totalItems }}

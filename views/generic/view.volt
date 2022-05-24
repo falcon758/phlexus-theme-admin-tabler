@@ -65,13 +65,13 @@
                             {% endif %}
                         </tbody>
                     </table>
-                    {{ 
-                        partial('partials/pagination',   [
-                            'page': paginate,
-                            'limit': paginate.getLimit()
-                        ])
-                    }}
                 </div>
+                {{ 
+                    partial('partials/pagination',   [
+                        'page': paginate,
+                        'limit': paginate.getLimit()
+                    ])
+                }}
             </div>
         </div>
     </div>
