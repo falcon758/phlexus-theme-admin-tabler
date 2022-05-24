@@ -11,7 +11,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="table-responsive">
-                    <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+                    <table class="table table-hover table-outline table-vcenter text-nowrap card-table dataTables_wrapper">
                         <thead>
                             <tr>
                                 {% for name in display %}
@@ -65,6 +65,12 @@
                             {% endif %}
                         </tbody>
                     </table>
+                    {{ 
+                        partial('partials/pagination',   [
+                            'page': paginate,
+                            'limit': paginate.getLimit()
+                        ])
+                    }}
                 </div>
             </div>
         </div>
