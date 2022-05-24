@@ -32,7 +32,7 @@
 
             {% if page.current < page.last %}
                 <li>
-                    <a class="paginate  btn btn-secondary" page-target="{{ page.last }}">&raquo;</a>
+                    <a class="paginate btn btn-secondary" page-target="{{ page.last }}">&raquo;</a>
                 </li>
             {% endif %}
             </ul>
