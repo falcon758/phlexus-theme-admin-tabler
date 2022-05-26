@@ -2,8 +2,13 @@
 {% set end         = (limit * (page.current - 1)) + limit %}
 {% set totalItems  = page.total_items %}
 {% set totalPages  = page.last > 1 ? page.last : 1 %}
+
+{% if start > totalItems %}
+  {% set start = 0 %}
+{% endif %}
+
 {% if end > totalItems %}
-  {% set end = totalItems%}
+  {% set end = totalItems %}
 {% endif %}
 
 <div class="container">

@@ -30,12 +30,35 @@
                             {{ default_translation._('link-dashboard') }}
                         </a>
                     </li>
+
                     {% if acl.hasPermission('shop', 'payment', 'index') %}
                         <li class="nav-item">
-                            <a href="{{ url('/payments') }}" 
-                            class="nav-link {{ currentPage === '/payments' ? 'active' : '' }}">
+                            <a href="javascript:void(0)" 
+                               class="nav-link {{ (currentPage === '/payment/inPayment' or currentPage === '/payment/history') ? 'active' : '' }}" 
+                               data-toggle="dropdown">
+                                <i class="fe fe-user"></i>
+                                {{ default_translation._('link-payments') }}
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-arrow">
+                                <a href="{{ url('/payment/inPayment') }}" 
+                                   class="dropdown-item {{ currentPage === '/payment/inPayment' ? 'active' : '' }}">
+                                    {{ default_translation._('link-payment-in-payment') }}
+                                </a>
+                                <a href="{{ url('/payment/history') }}" 
+                                   class="dropdown-item {{ currentPage === '/payment/history' ? 'active' : '' }}">
+                                    {{ default_translation._('link-payment-history') }}
+                                </a>
+                            </div>
+                        </li>
+                    {% endif %}
+
+                    {% if acl.hasPermission('shop', 'order', 'index') %}
+                        <li class="nav-item">
+                            <a href="{{ url('/orders') }}" 
+                            class="nav-link {{ currentPage === '/orders' ? 'active' : '' }}">
                                 <i class="fe fe-book"></i>
-                                {{ default_translation._('link-payment') }}
+                                {{ default_translation._('link-orders') }}
                             </a>
                         </li>
                     {% endif %}

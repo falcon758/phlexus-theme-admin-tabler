@@ -26,7 +26,7 @@
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
-                            {% for payment in payments %}
+                            {% for payment in payments.getItems() %}
                                 {% set paymentID = payment['paymentID'] %}
                                 <tr record-id="{{ paymentID }}">
                                     <td>
@@ -75,6 +75,13 @@
                         </tbody>
                     </table>
                 </div>
+                {{ 
+                    partial('partials/pagination',   [
+                        'page': payments,
+                        'limit': payments.getLimit(),
+                        'translator': default_translation
+                    ])
+                }}
             </div>
         </div>
     </div>
