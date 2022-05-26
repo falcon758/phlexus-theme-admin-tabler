@@ -4,7 +4,7 @@
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
-            {{ page_translation._('title-payments') }}
+            {{ page_translation._('title-payments-history') }}
         </h1>
     </div>
 
