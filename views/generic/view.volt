@@ -26,7 +26,7 @@
                             {% for record in records %}
                                 {% set recordID = record['id'] %}
 
-                                <tr record-id="{{ recordID }}">
+                                <tr">
                                     {% for name in display %}
                                     <td>
                                         <div>{{ record[name] }}</div>

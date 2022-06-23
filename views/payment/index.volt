@@ -28,7 +28,7 @@
                         <tbody csrf-token="{{ csrfToken }}">
                             {% for payment in payments.getItems() %}
                                 {% set paymentID = payment['paymentID'] %}
-                                <tr record-id="{{ paymentID }}">
+                                <tr>
                                     <td>
                                         <div>
                                             {{ default_translation._('product-' ~ payment['productID']) }}

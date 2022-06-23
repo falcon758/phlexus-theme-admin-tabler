@@ -24,7 +24,7 @@
                         <tbody csrf-token="{{ csrfToken }}">
                             {% for product in products %}
                                 {% set productID = product['id'] %}
-                                <tr record-id="{{ productID }}">
+                                <tr>
                                     <td>
                                         <div>
                                             {{ default_translation._('product-' ~ product['id']) }}

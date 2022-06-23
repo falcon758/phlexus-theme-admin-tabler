@@ -1,5 +1,6 @@
 // Action listeners
 (function($) {
+    // Trigger delete item action
     $('.item-action .delete-item').on('click', function () {
         const messageValidator = RegExp('^[a-zA-Z0-9\-\\s]+$');
         const row = $(this).parents('tr');
@@ -24,6 +25,15 @@
                     row.remove();
                 }
             });
+        }
+    });
+
+    // Trigger show/hide class
+    $('.trigger-element').on('click', function() {
+        const targetElement = $(this).attr('target-element');
+        
+        if (targetElement) {
+            $('.' + targetElement).toggleClass('d-none');
         }
     });
 })( jQuery );
