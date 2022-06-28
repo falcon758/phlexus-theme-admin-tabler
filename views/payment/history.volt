@@ -15,44 +15,62 @@
                     <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
                         <thead>
                             <tr>
-                                <th>{{ page_translation._('table-product') }}</th>
-                                <th>{{ page_translation._('table-quantity') }}</th>
-                                <th>{{ page_translation._('table-price') }}</th>
-                                <th>{{ default_translation._('table-action') }}</th>
+                                <th class="text-center">{{ page_translation._('table-payment-id') }}</th>
+                                <th class="text-center">{{ page_translation._('table-quantities') }}</th>
+                                <th class="text-center">{{ page_translation._('table-total-price') }}</th>
+                                <th class="text-center">{{ page_translation._('table-date') }}</th>
+                                <th class="text-center">{{ default_translation._('table-action') }}</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
-                            {% for payment in payments.getItems() %}
+                            {% for grouped in groupedOrder %}
+                                {% set paymentID        = grouped['paymentID'] %}
+                                {% set detailsElement = 'order-details-' ~ paymentID %}
+
                                 <tr>
-                                    <td>
-                                        <div>
-                                            {{ default_translation._('product-' ~ payment['productID']) }}
-                                        </div>
+                                    <td class="text-center">
+                                        <div>{{ grouped['paymentID'] }}</div>
                                     </td>
-                                    <td>
-                                        <div>{{ payment['quantity'] }}</div>
+                                    <td class="text-center">
+                                        <div>{{ grouped['totalQuantities'] }}</div>
                                     </td>
-                                    <td>
-                                        <div>{{ payment['price'] }} &euro;</div>
+                                    <td class="text-center">
+                                        <div>{{ grouped['totalPrice'] }} &euro;</div>
                                     </td>
-                                    <td>
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon">
-                                                <i class="fe fe-more-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="{{ viewRoute ~ payment['hashCode'] }}" class="dropdown-item pay-item" pay-route="">
-                                                    <i class="dropdown-icon fe fe-credit-card"></i>
-                                                    {{ page_translation._('link-view-order') }}
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <td class="text-center">
+                                        <div>{{ grouped['createdAt'] }}</div>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="{{ viewRoute ~ grouped['hashCode'] }}" class="btn btn-secondary">
+                                            <i class="dropdown-icon fe fe-book"></i>
+                                            {{ page_translation._('link-view-invoice') }}
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <a href="#" class="trigger-element" target-element="{{ detailsElement }}">
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
                                     </td>
                                 </tr>
+                                {% for item in grouped['items'] %}
+                                    <tr class="{{ detailsElement }} d-none">
+                                        <td class="text-center">
+                                            {{ default_translation._('product-' ~ item['productID']) }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ item['quantity'] }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ item['price'] }} &euro;
+                                        </td>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                {% endfor %}
                             {% endfor %}
-                            {% if payments|length == 0 %}
+                            {% if payments.getItems()|length == 0 %}
                                 <tr>
-                                    <td colspan="4">{{ page_translation._('text-no-payments') }}</td>
+                                    <td colspan="6">{{ page_translation._('text-no-payments') }}</td>
                                 </tr>
                             {% endif %}
                         </tbody>
