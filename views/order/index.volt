@@ -15,33 +15,31 @@
                     <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
                         <thead>
                             <tr>
-                                <th class="text-center">{{ page_translation._('table-product') }}</th>
-                                <th class="text-center">{{ page_translation._('table-quantity') }}</th>
-                                <th class="text-center">{{ page_translation._('table-price') }}</th>
+                                <th class="text-center">{{ page_translation._('table-order-id') }}</th>
+                                <th class="text-center">{{ page_translation._('table-quantities') }}</th>
+                                <th class="text-center">{{ page_translation._('table-total-price') }}</th>
                                 <th class="text-center">{{ page_translation._('table-date') }}</th>
                                 <th class="text-center">{{ default_translation._('table-action') }}</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
-                            {% for order in orders.getItems() %}
-                                {% set orderID        = order['id'] %}
+                            {% for grouped in groupedOrder %}
+                                {% set orderID        = grouped['orderID'] %}
                                 {% set detailsElement = 'order-details-' ~ orderID %}
 
                                 <tr>
                                     <td class="text-center">
-                                        <div>
-                                            {{ default_translation._('product-' ~ order['productID']) }}
-                                        </div>
+                                        <div>{{ grouped['orderID'] }}</div>
                                     </td>
                                     <td class="text-center">
-                                        <div>{{ order['quantity'] }}</div>
+                                        <div>{{ grouped['totalQuantities'] }}</div>
                                     </td>
                                     <td class="text-center">
-                                        <div>{{ order['price'] }} &euro;</div>
+                                        <div>{{ grouped['totalPrice'] }} &euro;</div>
                                     </td>
                                     <td class="text-center">
-                                        <div></div>
+                                        <div>{{ grouped['createdAt'] }}</div>
                                     </td>
                                     <td class="text-center">
                                         <a href="{{ viewRoute ~ order['hashCode'] }}" class="btn btn-secondary">
@@ -55,9 +53,20 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="{{ detailsElement }} d-none">
-                                    <td colspan="6">teste</td>
-                                </tr>
+                                {% for item in grouped['items'] %}
+                                    <tr class="{{ detailsElement }} d-none">
+                                        <td class="text-center">
+                                            {{ default_translation._('product-' ~ item['productID']) }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ item['quantity'] }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ item['price'] }} &euro;
+                                        </td>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                {% endfor %}
                             {% endfor %}
                             {% if orders|length == 0 %}
                                 <tr>
