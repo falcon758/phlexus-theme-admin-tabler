@@ -68,7 +68,7 @@
                                     </tr>
                                 {% endfor %}
                             {% endfor %}
-                            {% if orders|length == 0 %}
+                            {% if orders.getItems()|length == 0 %}
                                 <tr>
                                     <td colspan="6">{{ page_translation._('text-no-orders') }}</td>
                                 </tr>
