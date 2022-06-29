@@ -26,7 +26,7 @@
                     <li class="nav-item">
                         <a href="{{ url('/user') }}" 
                            class="nav-link {{ currentPage === '/user' ? 'active' : '' }}">
-                            <i class="fe fe-book"></i>
+                            <i class="fe fe-tag"></i>
                             {{ default_translation._('link-dashboard') }}
                         </a>
                     </li>
@@ -43,23 +43,11 @@
 
                     {% if acl.hasPermission('shop', 'payment', 'index') %}
                         <li class="nav-item">
-                            <a href="javascript:void(0)" 
-                               class="nav-link {{ (currentPage === '/payments' or currentPage === '/payment/history') ? 'active' : '' }}" 
-                               data-toggle="dropdown">
-                                <i class="fe fe-user"></i>
-                                {{ default_translation._('link-payments') }}
+                            <a href="{{ url('/payments') }}" 
+                            class="nav-link {{ currentPage === '/payments' ? 'active' : '' }}">
+                                <i class="fe fe-credit-card"></i>
+                                {{ default_translation._('link-payment-in-payment') }}
                             </a>
-
-                            <div class="dropdown-menu dropdown-menu-arrow">
-                                <a href="{{ url('/payments') }}" 
-                                   class="dropdown-item {{ currentPage === '/payments' ? 'active' : '' }}">
-                                    {{ default_translation._('link-payment-in-payment') }}
-                                </a>
-                                <a href="{{ url('/payment/history') }}" 
-                                   class="dropdown-item {{ currentPage === '/payment/history' ? 'active' : '' }}">
-                                    {{ default_translation._('link-payment-history') }}
-                                </a>
-                            </div>
                         </li>
                     {% endif %}
 
@@ -90,7 +78,7 @@
                             <a href="javascript:void(0)" 
                                class="nav-link {{ (currentPage === '/shop/product' or currentPage === '/shop/product/create') ? 'active' : '' }}" 
                                data-toggle="dropdown">
-                                <i class="fe fe-user"></i>
+                                <i class="fe fe-shopping-cart"></i>
                                 {{ default_translation._('link-products') }}
                             </a>
 
