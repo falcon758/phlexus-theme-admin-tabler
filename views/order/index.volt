@@ -42,7 +42,7 @@
                                         <div>{{ grouped['createdAt'] }}</div>
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{ viewRoute ~ grouped['hashCode'] }}" class="btn btn-secondary">
+                                        <a href="{{ orderRoute ~ grouped['hashCode'] }}" class="btn btn-secondary">
                                             <i class="dropdown-icon fe fe-book"></i>
                                             {{ page_translation._('link-view-invoice') }}
                                         </a>
