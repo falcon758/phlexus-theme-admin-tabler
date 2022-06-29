@@ -48,7 +48,7 @@
                                         </a>
                                     </td>
                                     <td class="text-center">
-                                        <a href="#" class="trigger-element" target-element="{{ detailsElement }}">
+                                        <a href="javascript:void(0)" class="trigger-element" target-element="{{ detailsElement }}">
                                             <i class="fa fa-angle-down"></i>
                                         </a>
                                     </td>
