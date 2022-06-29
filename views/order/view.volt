@@ -120,7 +120,7 @@
                                     <td colspan="3" class="strong text-end">
                                         {{ page_translation._('table-vat-tax') }}
                                     </td>
-                                    <td class="text-end">26%</td>
+                                    <td class="text-end">23%</td>
                                 </tr>
                                 <tr>
                                     <td colspan="3" class="strong text-end">
