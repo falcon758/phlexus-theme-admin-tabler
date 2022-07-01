@@ -63,7 +63,7 @@
                                 </address>
                             </div>
                             <div class="col-12 my-5">
-                                <h1>{{ page_translation._('subtitle-invoice-number') }} 1234</h1>
+                                <h1>{{ page_translation._('subtitle-invoice-number') }} {{ groupedOrder['invoiceNumber'] }}</h1>
                             </div>
                         </div>
                         <table class="table table-transparent table-responsive">
