@@ -24,7 +24,7 @@
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
-                            {% for grouped in groupedOrder %}
+                            {% for grouped in groupedpayments %}
                                 {% set paymentID        = grouped['paymentID'] %}
                                 {% set detailsElement = 'order-details-' ~ paymentID %}
 
