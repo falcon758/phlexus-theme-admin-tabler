@@ -39,7 +39,7 @@
                                         <div>{{ grouped['totalPrice'] }} &euro;</div>
                                     </td>
                                     <td class="text-center">
-                                        <div>{{ grouped['createdAt'] }}</div>
+                                        <div>{{ grouped['modifiedAt'] }}</div>
                                     </td>
                                     <td class="text-center">
                                         <a href="{{ viewRoute ~ grouped['hashCode'] }}" class="btn btn-secondary">
