@@ -24,7 +24,7 @@
                             </tr>
                         </thead>
                         <tbody csrf-token="{{ csrfToken }}">
-                            {% for grouped in groupedpayments %}
+                            {% for grouped in groupedPayments %}
                                 {% set paymentID        = grouped['paymentID'] %}
                                 {% set detailsElement = 'order-details-' ~ paymentID %}
 
@@ -68,7 +68,7 @@
                                     </tr>
                                 {% endfor %}
                             {% endfor %}
-                            {% if payments.getItems()|length == 0 %}
+                            {% if groupedPayments|length == 0 %}
                                 <tr>
                                     <td colspan="6">{{ page_translation._('text-no-payments') }}</td>
                                 </tr>

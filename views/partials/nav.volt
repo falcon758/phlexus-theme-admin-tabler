@@ -55,8 +55,8 @@
                                    class="dropdown-item {{ currentPage === '/payments' ? 'active' : '' }}">
                                     {{ default_translation._('link-payment-in-payment') }}
                                 </a>
-                                <a href="{{ url('/payment/history') }}" 
-                                   class="dropdown-item {{ currentPage === '/payment/history' ? 'active' : '' }}">
+                                <a href="{{ url('/payments/history') }}" 
+                                   class="dropdown-item {{ currentPage === '/payments/history' ? 'active' : '' }}">
                                     {{ default_translation._('link-payment-history') }}
                                 </a>
                             </div>
