@@ -44,7 +44,7 @@
                     {% if acl.hasPermission('shop', 'payment', 'index') %}
                         <li class="nav-item">
                             <a href="javascript:void(0)" 
-                               class="nav-link {{ (currentPage === '/payments' or currentPage === '/payment/history') ? 'active' : '' }}" 
+                               class="nav-link {{ (currentPage === '/payments' or currentPage === '/payments/history') ? 'active' : '' }}" 
                                data-toggle="dropdown">
                                 <i class="fe fe-credit-card"></i>
                                 {{ default_translation._('link-payments') }}
