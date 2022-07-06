@@ -116,18 +116,19 @@
                                         {{ groupedPayment['totalPrice'] }} &euro;
                                     </td>
                                 </tr>
+                                {% set vatTax = groupedPayment['vatTax'] %}
                                 <tr>
                                     <td colspan="3" class="strong text-end">
                                         {{ page_translation._('table-vat-tax') }}
                                     </td>
-                                    <td class="text-end">23%</td>
+                                    <td class="text-end">{{ vatTax * 100}} %</td>
                                 </tr>
                                 <tr>
                                     <td colspan="3" class="strong text-end">
                                         {{ page_translation._('table-vat-tax-value') }}
                                     </td>
                                     <td class="text-end">
-                                        {{ groupedPayment['totalPrice'] * 0.23 }} &euro;
+                                        {{ groupedPayment['totalPrice'] * vatTax }} &euro;
                                     </td>
                                 </tr>
                                 <tr>
