@@ -38,12 +38,12 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-6">
-                                <p class="h3">{{ page_translation._('table-company') }}</p>
+                                <p class="h3">{{ company['name'] }}</p>
                                 <address>
-                                    Street Address<br>
-                                    State, City<br>
-                                    Region, Postal Code<br>
-                                    ltd@example.com
+                                    {{ company['address']['street'] }}<br>
+                                    {{ company['address']['city'] }}<br>
+                                    {{ company['address']['post_code'] }}<br>
+                                    {{ company['email'] }}
                                 </address>
                             </div>
                             <div class="col-3 text-end">
