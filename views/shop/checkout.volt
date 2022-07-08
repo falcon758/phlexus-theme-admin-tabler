@@ -15,29 +15,31 @@
                 <div class="card">
                     {{ checkoutForm.render('csrf') }}
 
-                    <div class="card-header">
-                        <h3 class="card-title">{{ page_translation._('title-address') }}</h3>
-                    </div>
+                    {% for type in addressType %}
+                        <div class="card-header">
+                            <h3 class="card-title">{{ page_translation._('title-address-' ~ type) }}</h3>
+                        </div>
 
-                    <div class="table-responsive">
-                        <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
-                            <tbody>
-                                <tr>
-                                    <td colspan="2">
-                                        <div>{{ checkoutForm.render('address') }}</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-5">
-                                        <div>{{ checkoutForm.render('post_code') }}</div>
-                                    </td>
-                                    <td>
-                                        <div>{{ checkoutForm.render('country') }}</div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            <div>{{ checkoutForm.render('address_' ~type) }}</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-5">
+                                            <div>{{ checkoutForm.render('post_code_' ~ type) }}</div>
+                                        </td>
+                                        <td>
+                                            <div>{{ checkoutForm.render('country_' ~ type) }}</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    {% endfor %}
 
                     <div class="card-header">
                         <h3 class="card-title">
