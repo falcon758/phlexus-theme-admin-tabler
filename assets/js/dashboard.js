@@ -3,6 +3,7 @@ require.config({
         'flashMessage': ['jquery'],
         'paginator': ['jquery'],
         'products': ['jquery'],
+        'checkout': ['jquery'],
         'actions': ['jquery'],
         'bootstrap': ['jquery'],
         'sparkline': ['jquery'],
@@ -25,6 +26,7 @@ require.config({
         'circle-progress': 'js/vendors/circle-progress.min',
         'actions': 'js/generic/actions',
         'products': 'js/shop/products',
+        'checkout': 'js/shop/checkout',
         'flashMessage': 'js/flash',
         'paginator': 'js/paginator',
     }
@@ -132,4 +134,4 @@ window.tabler = {
     }
 };
 
-require(['core', 'flashMessage', 'paginator', 'actions', 'products']);
+require(['core', 'flashMessage', 'paginator', 'actions', 'products', 'checkout']);

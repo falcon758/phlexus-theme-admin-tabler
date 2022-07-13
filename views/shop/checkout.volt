@@ -16,6 +16,13 @@
                     {{ checkoutForm.render('csrf') }}
 
                     {% for type in addressType %}
+                        {% if type == 2 %}
+                        <div>
+                            <label for="same_address">{{ checkoutForm.getLabel('same_address') }}</label>
+                            {{ checkoutForm.render('same_address') }}
+                        </div>
+                        {% endif %}
+
                         <div class="card-header">
                             <h3 class="card-title">{{ page_translation._('title-address-' ~ type) }}</h3>
                         </div>
@@ -25,7 +32,7 @@
                                 <tbody>
                                     <tr>
                                         <td colspan="2">
-                                            <div>{{ checkoutForm.render('address_' ~type) }}</div>
+                                            <div>{{ checkoutForm.render('address_' ~ type) }}</div>
                                         </td>
                                     </tr>
                                     <tr>
