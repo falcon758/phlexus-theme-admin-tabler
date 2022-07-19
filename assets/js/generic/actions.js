@@ -14,7 +14,8 @@
 
         if (confirm('Are you sure you want do delete record: ' + message)) {
             const route = $(this).attr('delete-route');
-            const csrf = $(this).parents('tbody').attr('csrf-token');
+            const tbody = $(this).parents('tbody');
+            const csrf = tbody.attr('csrf-token');
 
             $.post(route, 'csrf=' + csrf, function(response) {
                 let status = response.success === true;
@@ -23,6 +24,7 @@
 
                 if (status) {
                     row.remove();
+                    tbody.attr('csrf-token', response.newToken);
                 }
             });
         }

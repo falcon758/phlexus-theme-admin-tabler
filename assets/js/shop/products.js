@@ -10,6 +10,8 @@
 
             let responseStatus = response.success === true ? 'success' : 'error';
             $.fn.flashMessage().flashAdd(response.message, responseStatus);
+
+            row.attr('csrf-token', response.newToken);
         });
     });
 })( jQuery );
