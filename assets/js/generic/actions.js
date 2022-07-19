@@ -5,7 +5,7 @@
         const messageValidator = RegExp('^[a-zA-Z0-9\-\\s]+$');
         const row = $(this).parents('tr');
 
-        let firstColText = row.find('td:first').text().trim();
+        const firstColText = row.find('td:first').text().trim();
         let message = 'Unknown';
 
         if (firstColText.match(messageValidator) !== null) {
@@ -18,8 +18,8 @@
             const csrf = tbody.attr('csrf-token');
 
             $.post(route, 'csrf=' + csrf, function(response) {
-                let status = response.success === true;
-                let responseStatus = status ? 'success' : 'error';
+                const status = response.success === true;
+                const responseStatus = status ? 'success' : 'error';
                 $.fn.flashMessage().flashAdd(response.message, responseStatus);
 
                 if (status) {

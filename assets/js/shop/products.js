@@ -8,10 +8,13 @@
         $.post(route, 'csrf=' + csrf, function(response) {
             console.log(response);
 
-            let responseStatus = response.success === true ? 'success' : 'error';
+            const status = response.success === true;
+            const responseStatus = status ? 'success' : 'error';
             $.fn.flashMessage().flashAdd(response.message, responseStatus);
 
-            row.attr('csrf-token', response.newToken);
+            if (response.success) {
+                row.attr('csrf-token', response.newToken);
+            }
         });
     });
 })( jQuery );
