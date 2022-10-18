@@ -5,7 +5,7 @@
     <div class="row row-cards">
         <div class="col-12">
 
-            {{ form('profile/save', 'class': 'card', 'enctype' : 'multipart/form-data') }}
+            {{ formLegacy(['action': 'profile/save', 'class': 'card', 'enctype' : 'multipart/form-data']) }}
                 {{ form.render('csrf') }}
 
                 <div class="card-header">

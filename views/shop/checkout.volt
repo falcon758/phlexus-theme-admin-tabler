@@ -11,7 +11,7 @@
     <div class="row row-cards row-deck">
         <div class="col-8">
 
-            {{ form(orderRoute, 'method': 'post', 'class': 'card') }}
+            {{ formLegacy(['action': orderRoute, 'method': 'post', 'class': 'card']) }}
                 <div class="card">
                     {{ checkoutForm.render('csrf') }}
 

@@ -7,7 +7,7 @@
                 <h4 class="card-title">{{ default_translation._('title-create') }}</h4>
             </div>
 
-            {{ form(saveRoute, 'class': 'card', 'enctype' : 'multipart/form-data') }}
+            {{ formLegacy(['action': saveRoute, 'class': 'card', 'enctype' : 'multipart/form-data']) }}
 
                 {{ form.render('csrf') }}
 

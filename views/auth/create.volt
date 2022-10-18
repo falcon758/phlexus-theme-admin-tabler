@@ -9,7 +9,7 @@
                     <img src="{{ assetsPath() ~ 'images/logo/phlexus.svg' }}" class="h-6" alt="">
                 </div>
 
-                {{ form('/user/auth/doCreate', 'method': 'post', 'class': 'card') }}
+                {{ formLegacy(['action': '/user/auth/doCreate', 'method': 'post', 'class': 'card']) }}
                     {{ form.render('csrf') }}
                     
                     <div class="card-body p-6">
