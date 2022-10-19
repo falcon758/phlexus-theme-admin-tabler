@@ -3,6 +3,6 @@
     "description": "Phlexus Base Admin Theme",
     "license": "BSD-3-Clause",
     "require": {
-        "falcon758/phlexus-library-translations": "^1.1.2"
+        "falcon758/phlexus-library-translations": "^2.0.0"
     }
 }
