@@ -1,7 +1,10 @@
 require.config({
     shim: {
+        'cookieConsent': ['jquery'],
+        'cookieConsentConfig': ['cookieConsent', 'jquery'],
         'flashMessage': ['jquery'],
         'paginator': ['jquery'],
+        'profile': ['jquery'],
         'products': ['jquery'],
         'checkout': ['jquery'],
         'actions': ['jquery'],
@@ -25,8 +28,12 @@ require.config({
         'vector-map-world': 'js/vendors/jquery-jvectormap-world-mill',
         'circle-progress': 'js/vendors/circle-progress.min',
         'actions': 'js/generic/actions',
+        'profile': 'js/profile/profile',
         'products': 'js/shop/products',
         'checkout': 'js/shop/checkout',
+        'cookieConsent': 'js/cookieconsent.min',
+        'cookieConsentConfig': 'js/cookieconsentconfig',
+        'sweetAlert': 'js/sweetalert2.all.min',
         'flashMessage': 'js/flash',
         'paginator': 'js/paginator',
     }
@@ -134,4 +141,4 @@ window.tabler = {
     }
 };
 
-require(['core', 'flashMessage', 'paginator', 'actions', 'products', 'checkout']);
+require(['core', 'cookieConsent', 'cookieConsentConfig', 'sweetAlert', 'flashMessage', 'paginator', 'actions']);

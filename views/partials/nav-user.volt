@@ -27,7 +27,7 @@
     </div>
 {% else %}
     <div class="nav-item d-none d-md-flex">
-        <a href="{{ url('/user') }}" class="btn btn-sm btn-outline-primary" target="_blank">
+        <a href="{{ url('/user') }}" class="btn btn-sm btn-outline-primary">
             {{ default_translation._('link-sign-in') }}
         </a>
     </div>

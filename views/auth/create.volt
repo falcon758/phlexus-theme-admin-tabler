@@ -32,7 +32,10 @@
 
                         <div class="form-group">
                             {{ form.render('accept_terms') }}
-                            {{ default_translation._('field-accept-terms') }}                            
+                            {{ default_translation._('field-accept-terms') }}
+			    <a href="{{ url('/terms-and-conditions') }}">
+                        	{{ page_translation._('link-tems-and-conditions') }}
+                    	    </a>                            
                         </div>
 
                         {{ form.render('g-recaptcha-response') }}

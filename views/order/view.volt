@@ -4,7 +4,7 @@
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
-            {{ page_translation._('title-invoice') }}
+            {{ page_translation._('title-preview-invoice') }}
         </h1>
     </div>
 
@@ -26,7 +26,7 @@
                                 <path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4" />
                                 <rect x="7" y="13" width="10" height="8" rx="2" />
                             </svg>
-                            Print Invoice
+                            {{ page_translation._('text-print-preview-invoice') }}
                         </button>
                     </div>
                 </div>
@@ -61,9 +61,6 @@
                                     {{ groupedOrder['shipmentPostCode'] }}<br/>
                                     {{ groupedOrder['shipmentCountry'] }}
                                 </address>
-                            </div>
-                            <div class="col-12 my-5">
-                                <h1>{{ page_translation._('subtitle-invoice-number') }} {{ groupedOrder['invoiceNumber'] }}</h1>
                             </div>
                         </div>
                         <table class="table table-transparent table-responsive">
@@ -141,6 +138,9 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <p class="text-muted text-center mt-5">
+                            {{ page_translation._('footer-notice-preview-invoice') }}
+                        </p>
                         <p class="text-muted text-center mt-5">
                             {{ page_translation._('footer-note') }}
                         </p>

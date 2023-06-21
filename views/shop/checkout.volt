@@ -1,6 +1,10 @@
 {% set page_translation = translation.setTypePage().getTranslator() %}
 {% set default_translation = translation.setPageType() %}
 
+<script type="text/javascript">
+    require(['checkout']);
+</script>
+
 <div class="container">
     <div class="page-header">
         <h1 class="page-title">
@@ -14,6 +18,26 @@
             {{ formLegacy(['action': orderRoute, 'method': 'post', 'class': 'card']) }}
                 <div class="card">
                     {{ checkoutForm.render('csrf') }}
+
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            {{ page_translation._('title-personal-info') }}
+                        </h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>{{ checkoutForm.render('name') }}</div>
+                                    </td>
+                                    <td>
+                                        <div>{{ checkoutForm.render('tax_number') }}</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
                     {% for type in addressType %}
                         {% if type == 2 %}
