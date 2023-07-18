@@ -45,7 +45,7 @@
 
         {% if limit %}
             <div class="col-2 mt-auto">
-                {{ translator._('paginator-showing') }} {{ start }} - {{ end  }} {{ translator._('paginator-of') }} {{ totalItems }}
+                {{ translator._('paginator-showing') }} {{ start }} - {{ end }} {{ translator._('paginator-of') }} {{ totalItems }}
             </div>
         {% endif %}
     </div>

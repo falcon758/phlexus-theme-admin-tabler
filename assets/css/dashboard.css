@@ -20343,3 +20343,15 @@ svg {
 .fe-zoom-out:before {
   content: "\ea06";
 }
+
+.card-image {
+  width: 10vw;
+  height: 10vw;
+  margin: 20px 70px;
+}
+
+.card-image-view {
+  width: 10vw;
+  height: 10vw;
+  margin: 0px auto;
+}
