@@ -9,7 +9,7 @@
     <div class="row row-cards">
         <div class="col-12">
             {% for blog in blogs.items %}
-                {% set blogUrl = blog.url ? blog.url : '/blog/view/' ~ blog.blogID %}
+                {% set blogUrl = blog.url ? blog.url : url('/blog/view/' ~ blog.blogID) %}
                 <div class="card card-aside">
                     <a href="{{ blogUrl }}" class="card-aside-column">
                         {% if blog.mediaName  %}
@@ -17,14 +17,20 @@
                         {% endif %}
                     </a>
                     <div class="card-body d-flex flex-column">
-                        <h4>
-                            <a href="{{ blogUrl }}">{{ blog.title }}</a>
-                        </h4>
+                        <div class="row">
+                            <div class="col-md-8 col-xl-10">
+                                <h4>
+                                    <a href="{{ blogUrl }}">{{ blog.title }}</a>
+                                </h4>
+                            </div>
+                            <div class="col-md-4 col-xl-2">
+                                <small class="d-block text-muted">{{ blog.createdAt }}</small>
+                            </div>
+                        </div>
                         <div class="text-muted">{{ blog.description }}</div>
                         <div class="d-flex align-items-center pt-5 mt-auto">
                             <div>
                                 <a href="{{ blogUrl }}" class="button large">{{ translator._('View blog') }}</a>
-                                <small class="d-block text-muted">{{ blog.createdAt }}</small>
                             </div>
                             <div class="ml-auto text-muted">
                                 <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3">

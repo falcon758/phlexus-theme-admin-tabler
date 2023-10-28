@@ -10,7 +10,14 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <small class="d-block text-muted text-right">{{ blog.createdAt }}</small>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-12">
+                            <a href="javascript:history.back()">&LeftArrow; {{ translator._('go-back') }}</a>
+                        </div>
+                        <div class="col-md-6 col-xl-12">
+                            <small class="d-block text-muted text-right">{{ blog.createdAt }}</small>
+                        </div>
+                    </div>
                     <div class="text-center">
                         {% if blog.mediaName  %}
                             <img class="card-image-view" src="{{ assetsPath() ~ 'images/' ~ blog.mediaName }}" alt="" />
