@@ -1,3 +1,4 @@
+{% set maxPages    = 10 %}
 {% set start       = (limit * (page.current - 1)) + 1 %}
 {% set end         = (limit * (page.current - 1)) + limit %}
 {% set totalItems  = page.total_items %}
@@ -22,6 +23,9 @@
             {% endif %}
 
             {% for i in 1..totalPages %}
+                {% if i > maxPages %}
+                    {% break %}
+                {% endif %}
                 <li>
                     <a class="paginate btn 
                     {% if i == page.current %} 
