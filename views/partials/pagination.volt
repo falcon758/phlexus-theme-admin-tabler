@@ -1,8 +1,18 @@
 {% set maxPages    = 10 %}
-{% set start       = (limit * (page.current - 1)) + 1 %}
-{% set end         = (limit * (page.current - 1)) + limit %}
+{% set splitPages  = maxPages / 2 %}
+{% set currentPage = page.current  %}
+{% set lastPage    = page.last %}
+{% set start       = (limit * (currentPage - 1)) + 1 %}
+{% set end         = (limit * (currentPage - 1)) + limit %}
 {% set totalItems  = page.total_items %}
-{% set totalPages  = page.last > 1 ? page.last : 1 %}
+{% set totalPages  = lastPage > 1 ? lastPage : 1 %}
+
+{% set startFrom   = currentPage > splitPages ? currentPage - splitPages : 1 %}
+{% set endOn       = startFrom + maxPages > lastPage ? lastPage : startFrom + maxPages %}
+
+{% if startFrom + maxPages > endOn %}
+    {% set startFrom  = endOn - maxPages %}
+{% endif %}
 
 {% if start > totalItems %}
   {% set start = 0 %}
@@ -16,19 +26,16 @@
     <div class="row">
         <div class="col-10 mt-auto">
             <ul class="pagination">
-            {% if page.current > 1 %}
+            {% if currentPage > 1 %}
                 <li>
                     <a class="paginate btn btn-secondary" page-target="1">&laquo;</a>
                 </li>
             {% endif %}
 
-            {% for i in 1..totalPages %}
-                {% if i > maxPages %}
-                    {% break %}
-                {% endif %}
+            {% for i in startFrom..endOn %}
                 <li>
                     <a class="paginate btn 
-                    {% if i == page.current %} 
+                    {% if i == currentPage %} 
                         btn-primary active
                     {% else %} 
                         btn-secondary 
@@ -39,9 +46,9 @@
                 </li>
             {% endfor %}
 
-            {% if page.current < page.last %}
+            {% if currentPage < lastPage %}
                 <li>
-                    <a class="paginate btn btn-secondary" page-target="{{ page.last }}">&raquo;</a>
+                    <a class="paginate btn btn-secondary" page-target="{{ lastPage }}">&raquo;</a>
                 </li>
             {% endif %}
             </ul>
