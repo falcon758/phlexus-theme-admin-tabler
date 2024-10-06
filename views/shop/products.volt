@@ -14,7 +14,14 @@
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">
-                            {{ default_translation._('product-' ~ productID) }}
+                            {% set productNameID  = 'product-' ~ productID %}
+                            {% set productName  = default_translation._(productNameID) %}
+                            
+                            {% if productName === productNameID %}
+                                {{ product.name }}
+                            {% else %}
+                                {{ productName }}
+                            {% endif %}
                         </h3>
                     </div>
 
