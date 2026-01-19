@@ -1,7 +1,7 @@
 {% set default_translation = translation.setPageType() %}
 
 <div class="header py-4">
-    <div class="container">
+    <div class="container-xl">
         <div class="d-flex">
             <a class="header-brand" href="/user">
                 <img src="{{ url(publicUserThemePath ~ '/images/logo/phlexus.svg') }}" class="header-brand-img" alt="phlexus logo">

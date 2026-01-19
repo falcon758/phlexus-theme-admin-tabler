@@ -22,41 +22,35 @@
   {% set end = totalItems %}
 {% endif %}
 
-<div class="container">
+<div class="container-xl">
     <div class="row">
-        <div class="col-10 mt-auto">
-            <ul class="pagination">
-            {% if currentPage > 1 %}
-                <li>
-                    <a class="paginate btn btn-secondary" page-target="1">&laquo;</a>
-                </li>
-            {% endif %}
+        <div class="col-12 col-lg-8">
+            <ul class="pagination justify-content-center justify-content-lg-start mb-0">
+                {% if currentPage > 1 %}
+                    <li class="page-item">
+                        <a class="paginate page-link" href="javascript:void(0)" page-target="1" aria-label="First">&laquo;</a>
+                    </li>
+                {% endif %}
 
-            {% for i in startFrom..endOn %}
-                <li>
-                    <a class="paginate btn 
-                    {% if i == currentPage %} 
-                        btn-primary active
-                    {% else %} 
-                        btn-secondary 
-                    {% endif %}" 
-                    page-target="{{ i }}">
-                        {{ i }}
-                    </a>
-                </li>
-            {% endfor %}
+                {% for i in startFrom..endOn %}
+                    <li class="page-item {{ i == currentPage ? 'active' : '' }}">
+                        <a class="paginate page-link" href="javascript:void(0)" page-target="{{ i }}">{{ i }}</a>
+                    </li>
+                {% endfor %}
 
-            {% if currentPage < lastPage %}
-                <li>
-                    <a class="paginate btn btn-secondary" page-target="{{ lastPage }}">&raquo;</a>
-                </li>
-            {% endif %}
+                {% if currentPage < lastPage %}
+                    <li class="page-item">
+                        <a class="paginate page-link" href="javascript:void(0)" page-target="{{ lastPage }}" aria-label="Last">&raquo;</a>
+                    </li>
+                {% endif %}
             </ul>
         </div>
 
         {% if limit %}
-            <div class="col-2 mt-auto">
-                {{ translator._('paginator-showing') }} {{ start }} - {{ end }} {{ translator._('paginator-of') }} {{ totalItems }}
+            <div class="col-12 col-lg-4 mt-2 mt-lg-0 text-muted text-center text-lg-right">
+                <small>
+                    {{ translator._('paginator-showing') }} {{ start }} - {{ end }} {{ translator._('paginator-of') }} {{ totalItems }}
+                </small>
             </div>
         {% endif %}
     </div>

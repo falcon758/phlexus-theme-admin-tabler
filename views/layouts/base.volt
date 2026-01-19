@@ -1,12 +1,12 @@
 {% set publicUserThemePath = assetsPath() %}
 
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         {{ partial('partials/head-base') }}
     </head>
 
-    <body>
+    <body class="antialiased">
         {{ partial('partials/flash-messages') }}
 
         <div class="page">

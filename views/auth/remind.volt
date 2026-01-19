@@ -2,14 +2,15 @@
 {% set default_translation = translation.setPage() %}
 
 <div class="page-single">
-    <div class="container">
+    <div class="container-xl">
         <div class="row">
             <div class="col col-login mx-auto">
                 <div class="text-center mb-6">
                     <img src="{{ assetsPath() ~ 'images/logo/phlexus.svg' }}" class="h-6" alt="">
+                    <div class="text-muted mt-2">{{ page_translation._('title-password-reminder') }}</div>
                 </div>
 
-                {{ formLegacy(['action': '/user/auth/doRemind', 'method': 'post', 'class': 'card']) }}
+                {{ formLegacy(['action': '/user/auth/doRemind', 'method': 'post', 'class': 'card card-md']) }}
                     {{ form.render('csrf') }}
                     
                     <div class="card-body p-6">

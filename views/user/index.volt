@@ -1,6 +1,6 @@
 <div class="page-main">
     <div class="header py-4">
-        <div class="container">
+        <div class="container-xl">
             <div class="d-flex">
                 <a class="header-brand" href="/user">
                     <img src="{{ url(publicUserThemePath ~ '/images/logo/phlexus.svg') }}" class="header-brand-img" alt="phlexus logo">
@@ -84,7 +84,7 @@
     </div>
 
     <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
-        <div class="container">
+        <div class="container-xl">
             <div class="row align-items-center">
                 <div class="col-lg-3 ml-auto">
                     <form class="input-icon my-3 my-lg-0">

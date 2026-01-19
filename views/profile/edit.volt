@@ -5,7 +5,7 @@
     require(['profile']);
 </script>
 
-<div class="container">
+<div class="container-xl">
     <div class="row row-cards">
         <div class="col-12">
 
@@ -67,16 +67,19 @@
                         <a href="{{ url(defaultRoute) }}" class="btn btn-link">{{ default_translation._('link-cancel') }}</a>
                         {{ submit_button(default_translation._('button-save')) }}
                     </div>
-
-                    <hr/>
-
-                    <h4>{{ page_translation._('profile-danger-zone') }}</h4>
-
-                    <div class="col-xl-12">
-                        <button id="account-removal" delete-route="{{ url('/profile/requestRemoval') }}" csrf-token="{{ accountRemovalToken }}" type="button" class="btn btn-danger">{{ default_translation._('link-request-account-removal') }}</button>
-                    </div>
                 </div>
             {{ end_form() }}
+
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h4 class="card-title">{{ page_translation._('profile-danger-zone') }}</h4>
+                </div>
+                <div class="card-body">
+                    <button id="account-removal" delete-route="{{ url('/profile/requestRemoval') }}" csrf-token="{{ accountRemovalToken }}" type="button" class="btn btn-danger">
+                        {{ default_translation._('link-request-account-removal') }}
+                    </button>
+                </div>
+            </div>
 
         </div>
     </div>

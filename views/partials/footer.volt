@@ -1,7 +1,7 @@
 {% set default_translation = translation.setPageType() %}
 
 <div class="footer">
-    <div class="container">
+    <div class="container-xl">
         <div class="row">
             <div class="col-lg-8">
                 <div class="row">
@@ -39,7 +39,7 @@
 </div>
 
 <footer class="footer">
-    <div class="container">
+    <div class="container-xl">
         <div class="row align-items-center flex-row-reverse">
             <div class="col-auto ml-lg-auto">
                 <div class="row align-items-center">

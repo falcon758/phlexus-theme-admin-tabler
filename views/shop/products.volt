@@ -5,7 +5,7 @@
     require(['products']);
 </script>
 
-<div class="container">
+<div class="container-xl">
     <div class="row row-cards" csrf-token="{{ csrfToken }}">
         {% for product in products %}
             {% set productID = product.id %}
@@ -27,23 +27,23 @@
 
                     <div class="card-body p-3 text-center">
                         {% if product.media.mediaName is defined %}
-                            <div class="h3 mt-auto">
-                                <img src="/assets/{{ imagesDir }}/{{ product.media.mediaName }}" />
+                            <div class="mb-3">
+                                <img class="img-fluid rounded" src="/assets/{{ imagesDir }}/{{ product.media.mediaName }}" alt="" />
                             </div>
                         {% endif %}
 
-                        <div class="mb-4">
+                        <div class="text-muted mb-4">
                             {{ default_translation._('product-description' ~ productID) }}
                         </div>
 
-                        <div class="h4 mt-auto">
+                        <div class="h3 mt-auto">
                             {{ product.price }} &euro;
                         </div>
 
                         <div class="mb-4">
-                            <btn class="btn btn-outline-primary product-buy" buy-route="{{ addRoute ~ productID }}">
-                                {{ page_translation._('button-buy') }}
-                            </btn>
+                            <button type="button" class="btn btn-primary product-buy" buy-route="{{ addRoute ~ productID }}">
+                                <i class="fe fe-shopping-cart mr-2"></i>{{ page_translation._('button-buy') }}
+                            </button>
                         </div>
                     </div>
                 </div>

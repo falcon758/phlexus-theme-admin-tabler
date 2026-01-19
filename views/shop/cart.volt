@@ -1,11 +1,13 @@
 {% set page_translation = translation.setTypePage().getTranslator() %}
 {% set default_translation = translation.setPage() %}
 
-<div class="container">
-    <div class="page-header">
-        <h1 class="page-title">
-            {{ page_translation._('title-cart') }}
-        </h1>
+<div class="container-xl">
+    <div class="page-header d-print-none">
+        <div class="row align-items-center">
+            <div class="col">
+                <h1 class="page-title">{{ page_translation._('title-cart') }}</h1>
+            </div>
+        </div>
     </div>
 
     <div class="row row-cards row-deck">
@@ -60,9 +62,11 @@
                     </table>
                 </div>
                 {% if products|length > 0 %}
-                    <a class="btn btn-outline-primary product-buy" href="{{ checkoutRoute }}">
-                        {{ page_translation._('link-checkout') }}
-                    </a>
+                    <div class="card-footer text-right">
+                        <a class="btn btn-primary" href="{{ checkoutRoute }}">
+                            <i class="fe fe-credit-card mr-2"></i>{{ page_translation._('link-checkout') }}
+                        </a>
+                    </div>
                 {% endif %}
             </div>
         </div>

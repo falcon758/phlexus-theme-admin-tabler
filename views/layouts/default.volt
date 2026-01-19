@@ -1,12 +1,12 @@
 {% set publicUserThemePath = assetsPath() %}
 
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         {{ partial('partials/head') }}
     </head>
 
-    <body>
+    <body class="antialiased">
         {{ partial('partials/header') }}
 
         {{ partial('partials/nav') }}
@@ -15,10 +15,10 @@
             {{ partial('partials/flash-messages') }}
 
             <div class="page-main">
-                <div class="my-3 my-md-5">
+                <div class="py-4">
                     {% if pageTitle is defined %}
-                        <div class="container">
-                            <div class="page-header">
+                        <div class="container-xl">
+                            <div class="page-header d-print-none">
                                 <h1 class="page-title">{{ pageTitle }}</h1>
                             </div>
                         </div>

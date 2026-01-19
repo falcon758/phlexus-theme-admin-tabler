@@ -2,7 +2,7 @@
 {% set default_translation = translation.setPageType() %}
 
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
-    <div class="container">
+    <div class="container-xl">
         <div class="row align-items-center">
             <div class="col-lg-3 ml-auto">
                 <form class="input-icon my-3 my-lg-0">

@@ -5,15 +5,17 @@
     require(['checkout']);
 </script>
 
-<div class="container">
-    <div class="page-header">
-        <h1 class="page-title">
-            {{ page_translation._('title-checkout') }}
-        </h1>
+<div class="container-xl">
+    <div class="page-header d-print-none">
+        <div class="row align-items-center">
+            <div class="col">
+                <h1 class="page-title">{{ page_translation._('title-checkout') }}</h1>
+            </div>
+        </div>
     </div>
 
     <div class="row row-cards row-deck">
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
 
             {{ formLegacy(['action': orderRoute, 'method': 'post', 'class': 'card']) }}
                 <div class="card">
@@ -94,13 +96,15 @@
                     {{ checkoutForm.render('g-recaptcha-response') }}
                 </div>
 
-                <button class="btn btn-outline-primary product-buy" type="submit">
-                    {{ page_translation._('button-order') }}
-                </button>
+                <div class="mt-3 text-right">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fe fe-check mr-2"></i>{{ page_translation._('button-order') }}
+                    </button>
+                </div>
             {{ end_form() }}
         </div>
 
-        <div class="col-4">
+        <div class="col-12 col-lg-4">
             <div class="card">
                 <div class="table-responsive">
                     <table class="table table-hover table-outline table-vcenter text-nowrap card-table">

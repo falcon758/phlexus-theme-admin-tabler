@@ -1,10 +1,8 @@
 {% set publicUserThemePath = assetsPath() %}
 
-<div class="container">
-    <div class="page-header">
-        <h1 class="page-title">
-            Dashboard
-        </h1>
+<div class="container-xl">
+    <div class="page-header d-print-none">
+        <h1 class="page-title">Dashboard</h1>
     </div>
     <div class="row row-cards">
         <div class="col-6 col-sm-4 col-lg-2">

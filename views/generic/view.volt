@@ -1,10 +1,8 @@
 {% set default_translation = translation.setPageType() %}
 
-<div class="container">
-    <div class="page-header">
-        <h1 class="page-title">
-            {{ default_translation._('title-view') }}
-        </h1>
+<div class="container-xl">
+    <div class="page-header d-print-none">
+        <h1 class="page-title">{{ default_translation._('title-view') }}</h1>
     </div>
 
     <div class="row row-cards row-deck">
@@ -26,7 +24,7 @@
                             {% for record in records %}
                                 {% set recordID = record['id'] %}
 
-                                <tr">
+                                <tr>
                                     {% for name in display %}
                                     <td>
                                         <div>{{ record[name] }}</div>

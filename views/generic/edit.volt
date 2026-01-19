@@ -1,15 +1,15 @@
 {% set default_translation = translation.setPageType() %}
 
-<div class="container">
+<div class="container-xl">
     <div class="row row-cards">
         <div class="col-12">
-            <div class="card-header">
-                <h4 class="card-title">{{ default_translation._('title-edit') }}</h4>
-            </div>
-
             {{ formLegacy(['action': saveRoute, 'class': 'card', 'enctype' : 'multipart/form-data']) }}
 
                 {{ form.render('csrf') }}
+
+                <div class="card-header">
+                    <h4 class="card-title">{{ default_translation._('title-edit') }}</h4>
+                </div>
 
                 <div class="card-body">
                     {% for field in form.getFields() %}
