@@ -1,0 +1,125 @@
+/* Minimal modern overrides for the legacy Tabler-based theme.
+   Keep this file light and layout-safe: enhance without rewriting components. */
+
+:root {
+  --phx-surface: #ffffff;
+  --phx-bg: #f5f7fb;
+  --phx-border: rgba(98, 105, 118, 0.18);
+  --phx-shadow: 0 10px 30px rgba(27, 31, 35, 0.08);
+  --phx-shadow-sm: 0 6px 16px rgba(27, 31, 35, 0.08);
+  --phx-radius: 12px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--phx-bg);
+}
+
+/* Typography */
+.page-title {
+  letter-spacing: -0.02em;
+}
+
+.page-header {
+  margin-bottom: 1.25rem;
+}
+
+.page-header .page-title {
+  font-weight: 700;
+}
+
+/* Cards */
+.card {
+  border-color: var(--phx-border);
+  border-radius: var(--phx-radius);
+  box-shadow: var(--phx-shadow-sm);
+}
+
+.card-header {
+  background: transparent;
+  border-bottom-color: var(--phx-border);
+}
+
+.card-aside {
+  overflow: hidden;
+}
+
+.card-aside-column {
+  background: #e9edf5;
+}
+
+.card-aside-column .card-image,
+.card-aside-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Buttons + inputs */
+.btn,
+.form-control,
+.custom-select {
+  border-radius: 10px;
+}
+
+.btn {
+  font-weight: 600;
+}
+
+.form-control:focus,
+.custom-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(32, 107, 196, 0.15);
+}
+
+/* Tables inside cards */
+.table.card-table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  border-bottom-color: var(--phx-border);
+}
+
+/* Auth pages */
+.page-single {
+  min-height: 100vh;
+  padding: 2.25rem 0;
+  background:
+    radial-gradient(900px 500px at 10% 10%, rgba(32, 107, 196, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 90% 10%, rgba(47, 179, 68, 0.14), transparent 55%),
+    var(--phx-bg);
+}
+
+.page-single .card {
+  box-shadow: var(--phx-shadow);
+}
+
+/* Product cards */
+.product .card {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.product .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 38px rgba(27, 31, 35, 0.14);
+}
+
+/* Footer */
+.footer,
+footer.footer {
+  background: var(--phx-surface);
+  border-top: 1px solid var(--phx-border);
+}
+
+/* Flash message spacing */
+#flash-messages {
+  padding-top: 1rem;
+}
+
+#flash-messages .alert {
+  border-radius: 12px;
+}
